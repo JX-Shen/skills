@@ -71,4 +71,12 @@ Only offer to create an ADR when all three are true:
 2. **Surprising without context**: a future reader will wonder "why did they do it this way?"
 3. **The result of a real trade-off**: there were genuine alternatives and you picked one for specific reasons
 
-If any of the three is missing, skip the ADR. Use the format in [ADR-FORMAT.md](./ADR-FORMAT.md).
+If any of the three is missing, skip the ADR.
+
+A decision that passes all three is worth recording; a fourth test decides *where*:
+
+4. **It is a principle, not a judgement** — strip every command name, flag, type and event kind out of the sentence and it still says something, *and* there is code not yet written that would have to obey it.
+
+A decision that passes the fourth test is an ADR. Use the format in [ADR-FORMAT.md](./ADR-FORMAT.md). A decision that fails it is a judgement about one behaviour: do not skip it silently, and do not put it in `docs/adr/`. Record it where the work was decided — in the issue that asked for it, as a closing comment headed **Decision** that states the behaviour and the options rejected — and have the code cite the issue by number. When a second judgement is later found arguing from the same rule, that is the moment the rule becomes an ADR, and both judgements cite it.
+
+A repo's `AGENTS.md` may state this gate more strictly; if it does, its version wins.
