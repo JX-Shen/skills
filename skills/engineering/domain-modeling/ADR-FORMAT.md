@@ -18,9 +18,71 @@ That's it. An ADR can be a single paragraph. The value is in recording *that* a 
 
 Only include these when they add genuine value. Most ADRs won't need them.
 
-- **Status** frontmatter (`proposed | accepted | deprecated | superseded by ADR-NNNN`): useful when decisions are revisited
+- **Status** frontmatter (`proposed | accepted | deprecated`): useful when decisions are revisited
 - **Considered Options**: only when the rejected alternatives are worth remembering
 - **Consequences**: only when non-obvious downstream effects need to be called out
+
+## What an ADR holds
+
+An ADR records a design conclusion and the reasoning for it **on design grounds alone**, and it
+treats the conclusion as settled. Everything it cites is reproducible from the repository: a
+quantity the argument needs is inlined, a reference points at a tracked file, and a question the
+repository cannot close is named by the issue that owns it.
+
+The **tracker** holds the rest, anything whose state lives outside git:
+
+- approval or ratification by anyone ("confirmed by management", "awaiting sign-off")
+- provisioning state ("three of the four accounts exist", "waits on a mailbox")
+- identifiers that belong to an external system: email addresses, account numbers, URLs into
+  ignored scratch directories
+- compliance, legal or residency verdicts that only a person outside the repository can give
+
+When such a question bears on the design, the ADR states the design choice, names the issue that
+escalates the question, and says what would change if the answer went the other way. When the
+outside decision later changes the design, amend the ADR then, and that amendment *is* the history.
+The `Status` frontmatter above tracks the decision's own lifecycle inside the repository, not any
+external approval.
+
+## Match the repo before you match this template
+
+Where `docs/adr/` already holds records, they are the format: a length, a set of
+sections, a title style, a voice. Follow them. This file is the default for a repo
+that has not decided; it never overrides one that has, and a repo whose ADRs are
+all dense argued records is not served by a one-paragraph addition to them.
+
+## Amend, don't supersede
+
+An ADR found to be wrong is corrected in place, and records inside itself what
+changed and why. Do not open a new ADR saying "supersedes ADR-000N": the argument
+then lives in two files and a reader has to find both to know what holds. A new
+number is for a subject that has genuinely split, never for a second opinion
+about an old one.
+
+An amendment is worth as much as the decision it corrects, and is written the
+same way: say what the earlier reasoning got wrong, not only what the conclusion
+now is.
+
+## What a record keeps
+
+"Considered Options" is not the whole of the reasoning worth keeping. Three
+things get dropped routinely and are the hardest to recover afterwards:
+
+- **An argument that was overturned, even where its conclusion survived.** If the
+  first reason for a boundary turned out not to imply it and a different reason
+  did, write both down. Otherwise a later reader concludes the line was drawn for
+  whichever reason now looks obvious, and moves it.
+- **A mistake that explains the design.** A shape that exists because a simpler
+  one was tried and failed reads as arbitrary once the simpler one is forgotten.
+- **What was deliberately not modelled.** A distinction you saw, weighed and left
+  out is a decision. Unwritten, it looks like an oversight, and someone
+  eventually "fixes" it.
+
+None of the three is a rejected alternative in the ordinary sense: they are
+reasoning that was tried rather than options that were on the table. Each is also
+unrecoverable after the fact, including by whoever decided it, which is what
+makes writing them down at the time the only chance.
+
+This applies to a **Decision** comment on an issue as much as to an ADR.
 
 ## Numbering
 
