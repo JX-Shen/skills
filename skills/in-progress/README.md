@@ -8,6 +8,7 @@ The plugin won't give you these. Install one directly:
 npx skills@latest add mattpocock/skills --skill=<name>
 ```
 
+- **[briefing](./briefing/SKILL.md)**: Produce a decision briefing that asks a named non-technical audience to ratify a design, with its cost stated. Ships a PDF renderer, a directory convention with immutable dated releases, and the summary-section discipline that survives review.
 - **[loop-me](./loop-me/SKILL.md)**: Grill yourself into implementable workflow specs over multiple sessions, using the current directory as a stateful workspace. User-invoked.
 - **[writing-beats](./writing-beats/SKILL.md)**: Shape an article as a journey of beats, choose-your-own-adventure style. Pick a starting beat, write only that beat, then pivot to the next, until the article reaches a natural end.
 - **[writing-fragments](./writing-fragments/SKILL.md)**: Grilling session that mines you for fragments (heterogeneous nuggets of writing) and appends them to a single document as raw material for a future article.
