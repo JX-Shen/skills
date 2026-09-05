@@ -3,6 +3,8 @@ name: grilling
 description: Grill the user relentlessly about a plan, decision, or idea. Use when the user wants to stress-test their thinking, or uses any 'grill' trigger phrases.
 ---
 
+**Mode.** Default to the round-by-round procedure below (v1.2). If the user has asked for the old one-question-at-a-time style — e.g. they say "legacy grilling", "v1.1 style", "old style", or "one question at a time" — use the **Legacy v1.1 style** procedure at the end of this file instead. This applies even when this skill is invoked indirectly (e.g. `grill-me`, `grill-with-docs`, `wayfinder`, `triage` running a `/grilling` session) — check the user's request for a version preference before picking a procedure.
+
 Interview the user relentlessly until you reach a shared understanding. Map this as a **design tree**: every decision branches into the decisions that hang off it.
 
 Work the tree in **rounds**. The **frontier** is every decision whose prerequisites are already settled: the questions you can ask _now_ without guessing at answers you haven't heard yet. Ask the whole frontier in one round: number each question and give your recommended answer. Then wait for the user's answers before the next round.
@@ -28,3 +30,13 @@ Each round the user answers reshapes the tree: settled decisions push the fronti
 Finding _facts_ is your job, never the user's. When a frontier question needs a fact from the environment (filesystem, tools, etc.), dispatch a sub-agent to find it; don't ask the user for anything you could look up yourself. Don't block on it: a running exploration is an unsettled prerequisite, so only the questions downstream of it wait for the sub-agent to report; ask the rest of the frontier now. The _decisions_ are the user's: put each to them and wait.
 
 The session is done when the frontier is empty: every branch of the design tree visited, nothing left silently assumed. Do not act on it until the user confirms you have reached a shared understanding.
+
+## Legacy v1.1 style (one question at a time)
+
+Interview the user relentlessly about every aspect of this plan or design until we reach a shared understanding. Walk down each branch of the design tree, resolving dependencies between decisions one-by-one. For each question, provide your recommended answer.
+
+Ask the questions one at a time, waiting for feedback on each question before continuing. Asking multiple questions at once is bewildering.
+
+If a *fact* can be found by exploring the codebase, look it up rather than asking the user. The *decisions*, though, are theirs — put each one to them and wait for their answer.
+
+Do not enact the plan until the user confirms we have reached a shared understanding.
