@@ -3,7 +3,7 @@ name: grilling
 description: Grill the user relentlessly about a plan, decision, or idea. Use when the user wants to stress-test their thinking, or uses any 'grill' trigger phrases.
 ---
 
-**Mode.** Default to the round-by-round procedure below (v1.2). If the user has asked for the old one-question-at-a-time style — e.g. they say "legacy grilling", "v1.1 style", "old style", or "one question at a time" — use the **Legacy v1.1 style** procedure at the end of this file instead. This applies even when this skill is invoked indirectly (e.g. `grill-me`, `grill-with-docs`, `wayfinder`, `triage` running a `/grilling` session) — check the user's request for a version preference before picking a procedure.
+**Mode.** Default to the round-by-round procedure below (v1.2). If the user has asked for the old one-question-at-a-time style (e.g. they say "legacy grilling", "v1.1 style", "old style", or "one question at a time"), use the **Legacy v1.1 style** procedure at the end of this file instead. This applies even when this skill is invoked indirectly (e.g. `grill-me`, `grill-with-docs`, `wayfinder`, `triage` running a `/grilling` session). Check the user's request for a version preference before picking a procedure.
 
 Interview the user relentlessly until you reach a shared understanding. Map this as a **design tree**: every decision branches into the decisions that hang off it.
 
