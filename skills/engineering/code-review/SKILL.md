@@ -31,9 +31,11 @@ Look for the originating spec, in this order:
 3. A spec file under `docs/`, `specs/`, or `.scratch/` matching the branch name or feature.
 4. If nothing is found, ask the user where the spec is. If they say there isn't one, the **Spec** sub-agent will skip and report "no spec available".
 
-### 3. Identify the standards sources
+### 3. Identify the repo sources
 
 Search the repo for every file that documents how code should be written. When `CODING_STANDARDS.md` or `CONTRIBUTING.md` exists, it must be on the list.
+
+Find the project's threat model in the repo before dispatching the reviews. Search file names and contents for threat models and trust boundaries, and follow relevant pointers from repo instructions, security docs, architecture docs, and ADRs. Read the sections that describe the changed entry points, adversary capabilities, protected assets, trust boundaries, and stated exclusions. Record the source paths and relevant claims. If the repo has no documented threat model, record "no repo threat model found" rather than inventing one.
 
 On top of whatever the repo documents, the Standards axis always carries the **smell baseline** below: a fixed set of Fowler code smells (_Refactoring_, ch.3) that applies even when a repo documents nothing. Two rules bind it:
 
@@ -63,19 +65,25 @@ Issue both sub-agent calls together, in the foreground, and aggregate the report
 
 - The full diff command and commit list.
 - The list of standards-source files you found in step 3, **plus the smell baseline from step 3** pasted in full (the sub-agent has no other access to it).
-- The brief: "Report, per file/hunk where relevant, (a) every place the diff violates a documented standard: cite the standard (file + the rule); and (b) any baseline smell you spot: name it and quote the hunk. Distinguish hard violations from judgement calls: documented-standard breaches can be hard, but baseline smells are always judgement calls, and a documented repo standard overrides the baseline. Skip anything tooling enforces. Under 400 words."
+- The threat-model sources and relevant claims found in step 3, or "no repo threat model found".
+- The brief: "Report, per file/hunk where relevant, (a) every place the diff violates a documented standard or threat-model constraint: cite the source (file + the rule or constraint); and (b) any baseline smell you spot: name it and quote the hunk. Apply the threat-evidence rule below. Distinguish hard violations from judgement calls: documented-standard breaches can be hard, but baseline smells are always judgement calls, and a documented repo standard overrides the baseline. Skip anything tooling enforces. Under 400 words."
 
 **Spec sub-agent prompt** should include:
 
 - The diff command and commit list.
 - The path or fetched contents of the spec.
-- The brief: "Report: (a) requirements the spec asked for that are missing or partial; (b) behaviour in the diff that wasn't asked for (scope creep); (c) requirements that look implemented but where the implementation looks wrong. Quote the spec line for each finding. Under 400 words."
+- The threat-model sources and relevant claims found in step 3, or "no repo threat model found".
+- The brief: "Report: (a) requirements the spec asked for that are missing or partial; (b) behaviour in the diff that wasn't asked for (scope creep); (c) requirements that look implemented but where the implementation looks wrong, including model-grounded threat paths. Quote the spec line for each finding. Apply the threat-evidence rule below. Under 400 words."
+
+Paste this **threat-evidence rule** into both prompts: "Inspect enough surrounding code to establish reachability. A threat finding must cite the repo's threat model for the relevant actor, capability, or trust boundary, then cite the changed code and trace a reachable path from entry point to protected asset or concrete impact. Treat a path that depends on undocumented access, deployment conditions, or behaviour as an uncertainty to check, not a finding. Do not manufacture threats to fill a report."
 
 If the spec is missing, skip the Spec sub-agent and note this in the final report.
 
 ### 5. Aggregate
 
 Present the two reports under `## Standards` and `## Spec` headings, verbatim or lightly cleaned. Do **not** merge or rerank findings, because the two axes are deliberately separate (see _Why two axes_).
+
+Verify each threat finding against its cited model and code path before including it. Omit unsupported threat claims. If no repo threat model was found, state that limit outside the findings.
 
 End with a one-line summary: total findings per axis, and the worst issue _within each axis_ (if any). Don't pick a single winner across axes: that's the reranking the separation exists to prevent.
 

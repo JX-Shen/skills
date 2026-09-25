@@ -2,6 +2,8 @@
 
 `code-review` reviews the diff between `HEAD` and a fixed point you name (a commit, a branch, a tag, `main`, `HEAD~5`) along two axes. **Standards** asks whether the code follows how this repo writes code. **Spec** asks whether the code does what the originating issue or [spec](https://www.aihero.dev/ai-coding-dictionary/spec) asked for. Each axis runs in its own [sub-agent](https://www.aihero.dev/ai-coding-dictionary/subagent) so neither sees the other's reasoning.
 
+Before either review, it looks inside the repo for the project's threat model. Threat findings must be grounded in that model and in a reachable path through the changed code.
+
 The skill never merges or re-ranks the two axes. The report ends with a worst issue *per axis* and declines to name a single winner across them. A change can pass one axis and fail the other. Code that follows every convention but implements the wrong thing passes Standards and fails Spec. Code that does exactly what the [ticket](https://www.aihero.dev/ai-coding-dictionary/ticket) asked but breaks the repo's conventions does the reverse. A blended verdict lets the passing axis hide the failing one.
 
 ## When to reach for it
@@ -37,9 +39,9 @@ Step 1 depends on the tracker doc, which [setup-matt-pocock-skills](https://aihe
 | | Standards | Spec |
 | --- | --- | --- |
 | Question | Is it built right? | Is it the right thing? |
-| Reads | The repo's documented standards, plus the smell baseline | The originating issue or spec |
+| Reads | The repo's documented standards and threat model, plus the smell baseline | The originating issue or spec and the repo's threat model |
 | Reports | Documented breaches (can be hard), and smells (always judgement calls) | Missing or partial requirements, scope creep, requirements implemented wrongly |
-| Every finding cites | The standards file and the rule, or the named smell plus the hunk | The line of the spec |
+| Every finding cites | The standards or threat-model constraint, or the named smell plus the hunk | The line of the spec; threat findings also cite the model and code path |
 
 This design exists to avoid a generic review skill that does not know your standards. Such a skill flags what is deliberate in your codebase and misses the invariants your codebase depends on. So the repo's own documentation is the [primary source](https://www.aihero.dev/ai-coding-dictionary/primary-source) on the Standards axis, and **the repo always overrides**.
 
@@ -70,7 +72,11 @@ Both work, and the skill does not decide for you. Per-ticket keeps each diff sma
 
 **Can I trust the findings?**
 
-Not without checking. Sub-agent output is a hypothesis, not evidence. One team reported a dozen breaking changes that prose-based reviews had missed. The skill combines the two reports as they are, or lightly cleaned. It does not re-verify each claim against the files, so a finding can cite the wrong location or overstate an impact. Read the citation on each finding before you act on it. The skill requires every finding to carry a citation (a standards rule, a smell plus its hunk, or a spec line), and that is what makes the findings checkable.
+Not without checking. Sub-agent output is a hypothesis, not evidence. One team reported a dozen breaking changes that prose-based reviews had missed. The skill verifies threat findings against the cited model and code path. Every other finding is combined as it is, or lightly cleaned, so it can cite the wrong location or overstate an impact. Read the citation on each finding before you act on it. The skill requires every finding to carry a citation (a standards rule, a smell plus its hunk, or a spec line), and that is what makes the findings checkable.
+
+**Does it use the project's threat model?**
+
+Yes. It searches repo instructions, security and architecture docs, and ADRs for documented adversary capabilities and trust boundaries. A threat finding needs a cited model constraint plus a reachable path from an entry point through changed code to a concrete impact. The reviewer checks that evidence before reporting it. If the repo has no documented threat model, the report says so. An imagined attacker or deployment condition does not become a finding.
 
 **Why does it find new problems every single time I run it?**
 
@@ -84,7 +90,8 @@ No. It diffs `<fixed-point>...HEAD`. The three-dot form measures from the merge-
 
 - It refuses to start on a bad ref or an empty diff, before any sub-agent is spawned.
 - The report arrives as two separate blocks under `## Standards` and `## Spec`, not one merged list.
-- Every Standards finding names either a rule in one of your repo's files or one of the twelve smells, with the hunk quoted; every Spec finding quotes a line of the spec.
+- Every Standards finding names a documented standard, threat-model constraint, or one of the twelve smells, with the relevant hunk quoted; every Spec finding quotes a line of the spec.
+- Each reported threat cites the repo's model and a reachable path through the change; when no model is found, the report names that limit.
 - The closing summary gives a worst issue per axis and declines to pick an overall winner.
 - With no spec available, the Spec block says so instead of listing requirements it inferred from the code.
 
