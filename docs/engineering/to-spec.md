@@ -2,7 +2,7 @@
 
 `to-spec` turns the conversation you have just had into a **[spec](https://www.aihero.dev/ai-coding-dictionary/spec)**, and publishes it to the issue that owns that scope. It selects the destination before drafting, so an existing research or discussion issue can become the current spec without creating a second maintained copy.
 
-It does not interview you. When you reach for it, the deciding is already done. So it synthesises what is known (from the thread, the codebase, your `GLOSSARY.md` and ADRs) and does not start a new round of questions. The spec records decisions you already made. It is not a place to make new ones.
+It does not interview you. When you reach for it, the deciding is already done. So it synthesises what is known (from the thread, the codebase, your `CONTEXT.md` and ADRs) and does not start a new round of questions. The spec records decisions you already made. It is not a place to make new ones.
 
 ## When to reach for it
 
