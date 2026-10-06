@@ -1,6 +1,6 @@
 ## What it does
 
-`to-spec` turns the conversation you have just had into a **[spec](https://www.aihero.dev/ai-coding-dictionary/spec)**, and publishes it to your issue tracker as a single issue.
+`to-spec` turns the conversation you have just had into a **[spec](https://www.aihero.dev/ai-coding-dictionary/spec)**, and publishes it to the issue that owns that scope. It selects the destination before drafting, so an existing research or discussion issue can become the current spec without creating a second maintained copy.
 
 It does not interview you. When you reach for it, the deciding is already done. So it synthesises what is known (from the thread, the codebase, your `GLOSSARY.md` and ADRs) and does not start a new round of questions. The spec records decisions you already made. It is not a place to make new ones.
 
@@ -27,6 +27,18 @@ The spec exists because context windows end. You settled many things while [gril
 
 So the spec does not validate or decide anything. It records what you decided, in your project's own vocabulary, so a fresh session can pick up the work without you explaining it again. If the spec states something you never said, that is a defect.
 
+## One home for the scope
+
+The destination follows your explicit choice and the project's issue conventions. Otherwise the skill reads referenced issues and checks the tracker for overlapping work before choosing:
+
+| Situation | Destination |
+| --- | --- |
+| The same goal has progressed from research to a specification | Update the existing issue |
+| A deliverable has its own scope and acceptance boundary | Create a linked child issue |
+| No existing issue owns the goal | Create a new issue |
+
+Updating the current body retains relevant evidence, links and unresolved questions. A series map and a release spec can be separate when the project gives them different responsibilities; this skill does not require that hierarchy in every project.
+
 ## Seams before prose
 
 Before it writes anything, `to-spec` sketches the **seams** where the feature will be tested, and checks them with you. It prefers existing seams to new ones, and picks the highest seam it can. The ideal number of seams for a change is one.
@@ -39,7 +51,7 @@ Other skills use those agreed seams later. [tdd](https://aihero.dev/skills-tdd) 
 It is this skill, renamed in v1.1. "Spec" is now the one term used throughout, and the old `to-prd` slug no longer works, so reinstall under the new name. The old vocabulary is replaced by the pair *spec* and *tickets*. The spec is the destination and the decisions that fix it. The [tickets](https://www.aihero.dev/ai-coding-dictionary/ticket) are the steps that get there. If you change direction, delete the unfinished tickets and keep the spec.
 
 **Why does the spec get the `ready-for-agent` label? I don't want an agent implementing off it.**
-The label means "no further triage needed": the document is complete enough for an agent to work from. It marks an input, not a work order. But [AFK](https://www.aihero.dev/ai-coding-dictionary/afk) agents that poll for `ready-for-agent` cannot see that difference. They will try to build the whole spec in one run instead of picking up the ticket slices. This is the most-reported problem with the skill. Until it changes, exclude the parent spec explicitly in your AFK agent's prompt, or remove the label after `/to-tickets` has run.
+It no longer gets that label just because it was published. The skill uses the project's triage-role mapping and applies `ready-for-agent` only when the scope is fully specified and eligible for agent work under those rules. A parent map, or a draft with open questions, keeps a suitable role. If an [AFK](https://www.aihero.dev/ai-coding-dictionary/afk) agent polls that label, check the project's eligibility rules. A spec existing is not an instruction to build the whole parent scope.
 
 **Why not go straight from grilling to `/to-tickets` and skip the spec?**
 Often you should. The spec is worth its step only on multi-session work. Its value is that the tickets are disposable and the spec is not. Each ticket is sized for one fresh context window and then gets deleted or closed, while the spec stays as the one place that records the reasoning behind them. On a single-session change, that gives you nothing, and you pay for an extra synthesis step where the [model](https://www.aihero.dev/ai-coding-dictionary/model) can drift. Go from grilling to `/implement`.
@@ -51,13 +63,13 @@ Give it the main map issue, `/to-spec #<map_issue>`, not the individual decision
 Mostly for the agent, and it reads that way: complete, dense, and full of references. Read the seams and the out-of-scope section. In those two places, a wrong decision is cheapest to catch now and most expensive to find later. People do complain about reading the whole thing, and there is no summary mode. But if the spec surprises you, the grilling was too shallow; the spec is not too long.
 
 **Do I keep the spec frozen once tickets start, or let the agent rewrite it?**
-Nothing keeps it in sync. In practice it is a snapshot of what you knew at that moment, and it goes out of date the first time implementation teaches you something. Treat it as disposable after the work ships. Your `GLOSSARY.md` and ADRs are the files meant to last. If you learn something during implementation that should last, put it there, not in an edited spec.
+Keep the current scope in the issue that owns it, and follow the project's rules for updates and decision records. Running `/to-spec` again for the same goal normally updates that issue rather than creating a successor. It records decisions already made and keeps the relevant evidence. It does not let an agent invent new scope during implementation. Lasting terms and architectural principles still go in the project's glossary and ADRs, where its conventions ask for them.
 
 **My work is a refactor or a module boundary, not a feature. Does the template fit?**
 Less well, and this is a known limitation. The template relies heavily on user stories, which do not fit architectural work. You end up writing stories nobody asked for around decisions that are really about interfaces and invariants. Use the implementation-decisions and testing-decisions sections instead. Record the lasting architectural decisions as ADRs through [grill-with-docs](https://aihero.dev/skills-grill-with-docs), not in the spec.
 
 **Will it check the tracker for related work, or cite the ADRs it's respecting?**
-No to both. It reads and follows the ADRs for the area it touches, but it does not link them. It also does not search the tracker for overlapping issues before it writes, so a spec can duplicate work that someone already filed, and nothing warns you. If the area is busy, search the tracker yourself first.
+It reads referenced issues and searches for overlapping work before it chooses a destination, unless you have chosen one yourself. It follows the relevant ADRs; how to cite them and record decisions is the project's choice. Updating an issue keeps its relevant evidence and links rather than replacing them with a template.
 
 **`/to-tickets` couldn't read my spec: it kept truncating.**
 A tracker issue may not return a very large spec in full, and there is no local copy to use instead. To fix this, do not [clear](https://www.aihero.dev/ai-coding-dictionary/clearing) or [compact](https://www.aihero.dev/ai-coding-dictionary/compaction) between `/to-spec` and `/to-tickets`. Run them in the same window, and `/to-tickets` never has to fetch the spec again.
@@ -67,6 +79,7 @@ A tracker issue may not return a very large spec in full, and there is no local 
 - It starts writing instead of asking you a new round of questions.
 - It shows you the seams before it writes, and proposes as few as it can.
 - It uses your project's nouns, not generic product-management boilerplate.
+- It updates the issue that already owns the goal, or explains the separate scope of a new child, instead of creating a second current spec for the same work.
 - You remember making every decision in it. It invented nothing to fill a section.
 - The out-of-scope section lists real things. The things you refused are usually the most useful lines on the page.
 

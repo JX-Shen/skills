@@ -12,11 +12,13 @@ The issue tracker and triage label vocabulary should have been provided to you. 
 
 1. Explore the repo to understand the current state of the codebase, if you haven't already. Use the project's domain glossary vocabulary throughout the spec, and respect any ADRs in the area you're touching.
 
-2. Sketch out the seams at which you're going to test the feature. Existing seams should be preferred to new ones. Use the highest seam possible. If new seams are needed, propose them at the highest point you can. The fewer seams across the codebase, the better - the ideal number is one.
+2. Select the issue that will hold the spec before drafting. Respect the user's explicit destination or request for a new issue. Otherwise read any referenced issue and search the tracker for overlapping work. When the same goal is progressing from research or discussion into a spec, update its existing issue by default. Create a linked child when the work has a distinct scope and acceptance boundary, or a new issue when no existing issue owns the goal. Follow the project's issue hierarchy rather than imposing one. Preserve relevant evidence, links and unresolved questions when updating the current body; do not leave two maintained specs for the same scope.
+
+3. Sketch out the seams at which you're going to test the feature. Existing seams should be preferred to new ones. Use the highest seam possible. If new seams are needed, propose them at the highest point you can. The fewer seams across the codebase, the better - the ideal number is one.
 
 Check with the user that these seams match their expectations.
 
-3. Write the spec using the template below, then publish it to the project issue tracker. Apply the `ready-for-agent` triage label - no need for additional triage.
+4. Write the spec using the template below, then publish it to the selected issue by updating or creating it as decided above. Use the project's triage-role mapping: `ready-for-agent` applies when the scope is fully specified and eligible for agent work under that project's rules. Preserve the appropriate role for a parent or draft with unresolved questions; publication alone does not make it implementation-ready. Return the issue link and state whether it was updated or created.
 
 <spec-template>
 

@@ -28,7 +28,10 @@ GitHub shares one number space across issues and PRs, so a bare `#42` may be eit
 
 ## When a skill says "publish to the issue tracker"
 
-Create a GitHub issue.
+Use the destination selected by the calling workflow. Update an existing issue
+with `gh issue edit <number> --body-file <file>`, or create one with
+`gh issue create --title "..." --body-file <file>` when the workflow calls for
+a new issue. Publishing does not itself mean creating a new issue.
 
 ## When a skill says "fetch the relevant ticket"
 

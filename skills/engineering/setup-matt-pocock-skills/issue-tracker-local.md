@@ -12,7 +12,11 @@ Issues and specs for this repo live as markdown files in `.scratch/`.
 
 ## When a skill says "publish to the issue tracker"
 
-Create a new file under `.scratch/<feature-slug>/` (creating the directory if needed).
+Use the destination selected by the calling workflow. Update the existing issue
+or spec file, preserving its comments and references, or create a file under
+`.scratch/<feature-slug>/` when the workflow calls for a new issue. Publishing
+does not itself mean creating a new file. Link distinct child scopes to their
+parent instead of maintaining two specs for the same scope.
 
 ## When a skill says "fetch the relevant ticket"
 

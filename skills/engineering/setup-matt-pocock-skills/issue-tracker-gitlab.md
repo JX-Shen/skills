@@ -28,7 +28,10 @@ Unlike GitHub, GitLab numbers issues and MRs separately, so `#42` is unambiguous
 
 ## When a skill says "publish to the issue tracker"
 
-Create a GitLab issue.
+Use the destination selected by the calling workflow. Update an existing issue
+with `glab issue update <number> --description "..."`, or use `glab issue create`
+when the workflow calls for a new issue. Publishing does not itself mean
+creating a new issue.
 
 ## When a skill says "fetch the relevant ticket"
 
