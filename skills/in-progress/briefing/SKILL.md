@@ -39,11 +39,19 @@ Across the whole document, carry three things **together**: a strong recommendat
 
 Orphaned headings, split tables, colliding diagram labels and overflowing URLs live in the pixels, not in the Markdown. Read every page, every render.
 
-## 6. Release only what the user approved
+## 6. Lint, then cold-read, before the user sees a draft
+
+The build runs `scripts/briefkit/lint.py` first and refuses a brief whose shape is off: summary not first or too long, a number with no figure or citation, a section out of the order [`SHAPE.md`](SHAPE.md) sets for the kind, a phrase that dresses up a position. Fix every line it names.
+
+Then run the cold read in [`agents/cold-read.md`](agents/cold-read.md): a fresh subagent plays the reader from step 2 and answers three questions from the rendered medium alone. A miss on the first question sends you back to step 1, not to the wording. Only a draft that has passed both goes to the user.
+
+**Done when** the lint prints `shape ok` and the cold read's three answers are in the README with what changed.
+
+## 7. Release only what the user approved
 
 The user approves the content *and* the rendered pages. Then cut a date-stamped file and treat it as immutable — corrections are a new date, never an overwrite.
 
-## 7. Ratchet every confirmation into the README
+## 8. Ratchet every confirmation into the README
 
 Each time the user corrects the essence, the order, the voice, or the register, write the confirmed principle into the briefing directory's `README.md` as a rule with its reason. The README is a **ratchet**: it turns one way, so a later edit cannot quietly undo a decision the user already made.
 
