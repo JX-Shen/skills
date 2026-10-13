@@ -1,0 +1,2763 @@
+{
+ "reference_date": "2023-08-31",
+ "effective_date": "2023-09-15",
+ "grids": {
+  "test": {
+   "as_of": "2023-11-30",
+   "rebalance": "September 2023 \u2014 the rebalance our 2023-08-31 reference date drives",
+   "overlap": 97,
+   "weight_covered": 97.8919,
+   "cells": [
+    {
+     "t": "META",
+     "w": 9.7042,
+     "m": true
+    },
+    {
+     "t": "NVDA",
+     "w": 8.3176,
+     "m": true
+    },
+    {
+     "t": "AVGO",
+     "w": 6.5172,
+     "m": true
+    },
+    {
+     "t": "LLY",
+     "w": 6.183,
+     "m": true
+    },
+    {
+     "t": "JPM",
+     "w": 6.009,
+     "m": true
+    },
+    {
+     "t": "NFLX",
+     "w": 3.3944,
+     "m": true
+    },
+    {
+     "t": "ORCL",
+     "w": 2.9934,
+     "m": true
+    },
+    {
+     "t": "MRK",
+     "w": 2.6559,
+     "m": true
+    },
+    {
+     "t": "GE",
+     "w": 2.6043,
+     "m": true
+    },
+    {
+     "t": "WMT",
+     "w": 2.4277,
+     "m": true
+    },
+    {
+     "t": "LIN",
+     "w": 2.3315,
+     "m": true
+    },
+    {
+     "t": "TJX",
+     "w": 1.6384,
+     "m": true
+    },
+    {
+     "t": "BKNG",
+     "w": 1.6184,
+     "m": true
+    },
+    {
+     "t": "BA",
+     "w": 1.5891,
+     "m": true
+    },
+    {
+     "t": "CAT",
+     "w": 1.3722,
+     "m": true
+    },
+    {
+     "t": "AMAT",
+     "w": 1.2119,
+     "m": true
+    },
+    {
+     "t": "ETN",
+     "w": 1.1769,
+     "m": true
+    },
+    {
+     "t": "ISRG",
+     "w": 1.1709,
+     "m": true
+    },
+    {
+     "t": "SYK",
+     "w": 1.1023,
+     "m": true
+    },
+    {
+     "t": "GILD",
+     "w": 1.0657,
+     "m": true
+    },
+    {
+     "t": "PANW",
+     "w": 1.0076,
+     "m": true
+    },
+    {
+     "t": "BSX",
+     "w": 0.9333,
+     "m": true
+    },
+    {
+     "t": "DE",
+     "w": 0.9146,
+     "m": true
+    },
+    {
+     "t": "MDLZ",
+     "w": 0.9136,
+     "m": false
+    },
+    {
+     "t": "SLB",
+     "w": 0.9005,
+     "m": true
+    },
+    {
+     "t": "LRCX",
+     "w": 0.8787,
+     "m": true
+    },
+    {
+     "t": "VRTX",
+     "w": 0.8246,
+     "m": true
+    },
+    {
+     "t": "TDG",
+     "w": 0.775,
+     "m": true
+    },
+    {
+     "t": "ORLY",
+     "w": 0.7583,
+     "m": true
+    },
+    {
+     "t": "PCAR",
+     "w": 0.7367,
+     "m": true
+    },
+    {
+     "t": "ITW",
+     "w": 0.7238,
+     "m": true
+    },
+    {
+     "t": "MPC",
+     "w": 0.7179,
+     "m": true
+    },
+    {
+     "t": "REGN",
+     "w": 0.7167,
+     "m": true
+    },
+    {
+     "t": "PH",
+     "w": 0.7062,
+     "m": true
+    },
+    {
+     "t": "PCG",
+     "w": 0.6677,
+     "m": true
+    },
+    {
+     "t": "ACGL",
+     "w": 0.6116,
+     "m": true
+    },
+    {
+     "t": "TT",
+     "w": 0.6069,
+     "m": true
+    },
+    {
+     "t": "DHI",
+     "w": 0.598,
+     "m": true
+    },
+    {
+     "t": "APD",
+     "w": 0.5631,
+     "m": true
+    },
+    {
+     "t": "ROST",
+     "w": 0.5626,
+     "m": true
+    },
+    {
+     "t": "CARR",
+     "w": 0.5581,
+     "m": true
+    },
+    {
+     "t": "CPRT",
+     "w": 0.5552,
+     "m": true
+    },
+    {
+     "t": "MCK",
+     "w": 0.5284,
+     "m": true
+    },
+    {
+     "t": "AFL",
+     "w": 0.515,
+     "m": true
+    },
+    {
+     "t": "CAH",
+     "w": 0.514,
+     "m": true
+    },
+    {
+     "t": "HCA",
+     "w": 0.5066,
+     "m": true
+    },
+    {
+     "t": "RCL",
+     "w": 0.4974,
+     "m": true
+    },
+    {
+     "t": "CEG",
+     "w": 0.497,
+     "m": true
+    },
+    {
+     "t": "PSX",
+     "w": 0.4955,
+     "m": true
+    },
+    {
+     "t": "AJG",
+     "w": 0.493,
+     "m": true
+    },
+    {
+     "t": "FCX",
+     "w": 0.4815,
+     "m": true
+    },
+    {
+     "t": "DXCM",
+     "w": 0.4698,
+     "m": true
+    },
+    {
+     "t": "MAR",
+     "w": 0.4671,
+     "m": true
+    },
+    {
+     "t": "LEN",
+     "w": 0.4248,
+     "m": true
+    },
+    {
+     "t": "COR",
+     "w": 0.424,
+     "m": true
+    },
+    {
+     "t": "MCHP",
+     "w": 0.4175,
+     "m": true
+    },
+    {
+     "t": "FICO",
+     "w": 0.4141,
+     "m": true
+    },
+    {
+     "t": "AME",
+     "w": 0.4109,
+     "m": true
+    },
+    {
+     "t": "GWW",
+     "w": 0.3961,
+     "m": true
+    },
+    {
+     "t": "IDXX",
+     "w": 0.3829,
+     "m": true
+    },
+    {
+     "t": "PHM",
+     "w": 0.381,
+     "m": true
+    },
+    {
+     "t": "IT",
+     "w": 0.3692,
+     "m": true
+    },
+    {
+     "t": "PWR",
+     "w": 0.3629,
+     "m": true
+    },
+    {
+     "t": "JCI",
+     "w": 0.359,
+     "m": true
+    },
+    {
+     "t": "BKR",
+     "w": 0.3544,
+     "m": true
+    },
+    {
+     "t": "AMP",
+     "w": 0.3424,
+     "m": true
+    },
+    {
+     "t": "HES",
+     "w": 0.3416,
+     "m": true
+    },
+    {
+     "t": "URI",
+     "w": 0.338,
+     "m": true
+    },
+    {
+     "t": "ODFL",
+     "w": 0.3317,
+     "m": true
+    },
+    {
+     "t": "ON",
+     "w": 0.3302,
+     "m": true
+    },
+    {
+     "t": "VMC",
+     "w": 0.3217,
+     "m": true
+    },
+    {
+     "t": "ROK",
+     "w": 0.3184,
+     "m": true
+    },
+    {
+     "t": "DD",
+     "w": 0.3084,
+     "m": true
+    },
+    {
+     "t": "IR",
+     "w": 0.2831,
+     "m": true
+    },
+    {
+     "t": "DRI",
+     "w": 0.2818,
+     "m": true
+    },
+    {
+     "t": "FSLR",
+     "w": 0.2775,
+     "m": true
+    },
+    {
+     "t": "DAL",
+     "w": 0.2739,
+     "m": true
+    },
+    {
+     "t": "MLM",
+     "w": 0.2614,
+     "m": true
+    },
+    {
+     "t": "CMI",
+     "w": 0.2606,
+     "m": false
+    },
+    {
+     "t": "HWM",
+     "w": 0.2564,
+     "m": true
+    },
+    {
+     "t": "NVR",
+     "w": 0.2542,
+     "m": true
+    },
+    {
+     "t": "ZBH",
+     "w": 0.247,
+     "m": true
+    },
+    {
+     "t": "AXON",
+     "w": 0.221,
+     "m": true
+    },
+    {
+     "t": "EG",
+     "w": 0.2109,
+     "m": true
+    },
+    {
+     "t": "WAB",
+     "w": 0.2085,
+     "m": true
+    },
+    {
+     "t": "CCL",
+     "w": 0.2056,
+     "m": true
+    },
+    {
+     "t": "LVS",
+     "w": 0.1903,
+     "m": true
+    },
+    {
+     "t": "IRM",
+     "w": 0.1859,
+     "m": true
+    },
+    {
+     "t": "LW",
+     "w": 0.1767,
+     "m": true
+    },
+    {
+     "t": "STLD",
+     "w": 0.1609,
+     "m": true
+    },
+    {
+     "t": "OMC",
+     "w": 0.142,
+     "m": true
+    },
+    {
+     "t": "MGM",
+     "w": 0.1384,
+     "m": true
+    },
+    {
+     "t": "UAL",
+     "w": 0.1382,
+     "m": true
+    },
+    {
+     "t": "SNA",
+     "w": 0.1352,
+     "m": true
+    },
+    {
+     "t": "PNR",
+     "w": 0.1233,
+     "m": true
+    },
+    {
+     "t": "WYNN",
+     "w": 0.1109,
+     "m": true
+    },
+    {
+     "t": "SJM",
+     "w": 0.1046,
+     "m": false
+    },
+    {
+     "t": "BWA",
+     "w": 0.088,
+     "m": true
+    },
+    {
+     "t": "NCLH",
+     "w": 0.0764,
+     "m": true
+    },
+    {
+     "t": "RL",
+     "w": 0.049,
+     "m": true
+    }
+   ],
+   "ours_only": [
+    "CDNS",
+    "CTAS",
+    "TPR"
+   ]
+  },
+  "control": {
+   "as_of": "2023-08-31",
+   "rebalance": "March 2023 \u2014 the previous rebalance, which our run does not compute",
+   "overlap": 36,
+   "weight_covered": 43.3901,
+   "cells": [
+    {
+     "t": "LLY",
+     "w": 10.2314,
+     "m": true
+    },
+    {
+     "t": "XOM",
+     "w": 8.4911,
+     "m": false
+    },
+    {
+     "t": "MRK",
+     "w": 7.1498,
+     "m": true
+    },
+    {
+     "t": "CVX",
+     "w": 5.3228,
+     "m": false
+    },
+    {
+     "t": "ABBV",
+     "w": 3.1538,
+     "m": false
+    },
+    {
+     "t": "COP",
+     "w": 2.6026,
+     "m": false
+    },
+    {
+     "t": "CAT",
+     "w": 2.2859,
+     "m": true
+    },
+    {
+     "t": "BMY",
+     "w": 1.9617,
+     "m": false
+    },
+    {
+     "t": "CI",
+     "w": 1.8928,
+     "m": false
+    },
+    {
+     "t": "AMGN",
+     "w": 1.8682,
+     "m": false
+    },
+    {
+     "t": "GILD",
+     "w": 1.7399,
+     "m": true
+    },
+    {
+     "t": "MPC",
+     "w": 1.7234,
+     "m": true
+    },
+    {
+     "t": "TMUS",
+     "w": 1.7133,
+     "m": false
+    },
+    {
+     "t": "VRTX",
+     "w": 1.5991,
+     "m": true
+    },
+    {
+     "t": "LMT",
+     "w": 1.5815,
+     "m": false
+    },
+    {
+     "t": "MCK",
+     "w": 1.5011,
+     "m": true
+    },
+    {
+     "t": "SLB",
+     "w": 1.4311,
+     "m": true
+    },
+    {
+     "t": "PGR",
+     "w": 1.3437,
+     "m": false
+    },
+    {
+     "t": "ELV",
+     "w": 1.2826,
+     "m": false
+    },
+    {
+     "t": "REGN",
+     "w": 1.2642,
+     "m": true
+    },
+    {
+     "t": "MMC",
+     "w": 1.2566,
+     "m": false
+    },
+    {
+     "t": "VLO",
+     "w": 1.216,
+     "m": false
+    },
+    {
+     "t": "CB",
+     "w": 1.2108,
+     "m": false
+    },
+    {
+     "t": "ADP",
+     "w": 1.1591,
+     "m": false
+    },
+    {
+     "t": "HUM",
+     "w": 1.1218,
+     "m": false
+    },
+    {
+     "t": "EOG",
+     "w": 0.9929,
+     "m": false
+    },
+    {
+     "t": "NUE",
+     "w": 0.9854,
+     "m": false
+    },
+    {
+     "t": "OXY",
+     "w": 0.9763,
+     "m": false
+    },
+    {
+     "t": "HES",
+     "w": 0.961,
+     "m": true
+    },
+    {
+     "t": "NOC",
+     "w": 0.8854,
+     "m": false
+    },
+    {
+     "t": "AON",
+     "w": 0.8786,
+     "m": false
+    },
+    {
+     "t": "CEG",
+     "w": 0.8593,
+     "m": true
+    },
+    {
+     "t": "ORLY",
+     "w": 0.849,
+     "m": true
+    },
+    {
+     "t": "AJG",
+     "w": 0.8301,
+     "m": true
+    },
+    {
+     "t": "APD",
+     "w": 0.829,
+     "m": true
+    },
+    {
+     "t": "CDNS",
+     "w": 0.788,
+     "m": true
+    },
+    {
+     "t": "CTVA",
+     "w": 0.7226,
+     "m": false
+    },
+    {
+     "t": "AZO",
+     "w": 0.7085,
+     "m": false
+    },
+    {
+     "t": "PSX",
+     "w": 0.6792,
+     "m": true
+    },
+    {
+     "t": "SRE",
+     "w": 0.6723,
+     "m": false
+    },
+    {
+     "t": "PCAR",
+     "w": 0.6634,
+     "m": true
+    },
+    {
+     "t": "AFL",
+     "w": 0.6515,
+     "m": true
+    },
+    {
+     "t": "ACGL",
+     "w": 0.6168,
+     "m": true
+    },
+    {
+     "t": "MNST",
+     "w": 0.6091,
+     "m": false
+    },
+    {
+     "t": "GD",
+     "w": 0.6083,
+     "m": false
+    },
+    {
+     "t": "PWR",
+     "w": 0.6054,
+     "m": true
+    },
+    {
+     "t": "CAH",
+     "w": 0.5983,
+     "m": true
+    },
+    {
+     "t": "TDG",
+     "w": 0.5933,
+     "m": true
+    },
+    {
+     "t": "GIS",
+     "w": 0.5826,
+     "m": false
+    },
+    {
+     "t": "TRV",
+     "w": 0.5441,
+     "m": false
+    },
+    {
+     "t": "URI",
+     "w": 0.54,
+     "m": true
+    },
+    {
+     "t": "COR",
+     "w": 0.5233,
+     "m": true
+    },
+    {
+     "t": "VICI",
+     "w": 0.5171,
+     "m": false
+    },
+    {
+     "t": "FSLR",
+     "w": 0.4983,
+     "m": true
+    },
+    {
+     "t": "HAL",
+     "w": 0.4939,
+     "m": false
+    },
+    {
+     "t": "BIIB",
+     "w": 0.4868,
+     "m": false
+    },
+    {
+     "t": "WMB",
+     "w": 0.4771,
+     "m": false
+    },
+    {
+     "t": "STLD",
+     "w": 0.4728,
+     "m": true
+    },
+    {
+     "t": "HSY",
+     "w": 0.4559,
+     "m": false
+    },
+    {
+     "t": "GWW",
+     "w": 0.4533,
+     "m": true
+    },
+    {
+     "t": "DVN",
+     "w": 0.4519,
+     "m": false
+    },
+    {
+     "t": "ED",
+     "w": 0.4234,
+     "m": false
+    },
+    {
+     "t": "GPC",
+     "w": 0.4227,
+     "m": false
+    },
+    {
+     "t": "CMI",
+     "w": 0.4066,
+     "m": false
+    },
+    {
+     "t": "ULTA",
+     "w": 0.4012,
+     "m": false
+    },
+    {
+     "t": "LW",
+     "w": 0.3725,
+     "m": true
+    },
+    {
+     "t": "OKE",
+     "w": 0.3692,
+     "m": false
+    },
+    {
+     "t": "PCG",
+     "w": 0.3649,
+     "m": true
+    },
+    {
+     "t": "KHC",
+     "w": 0.3649,
+     "m": false
+    },
+    {
+     "t": "FANG",
+     "w": 0.3261,
+     "m": false
+    },
+    {
+     "t": "EIX",
+     "w": 0.3192,
+     "m": false
+    },
+    {
+     "t": "PFG",
+     "w": 0.3048,
+     "m": false
+    },
+    {
+     "t": "HWM",
+     "w": 0.3026,
+     "m": true
+    },
+    {
+     "t": "TRGP",
+     "w": 0.2774,
+     "m": false
+    },
+    {
+     "t": "CTRA",
+     "w": 0.2732,
+     "m": false
+    },
+    {
+     "t": "EQT",
+     "w": 0.2691,
+     "m": false
+    },
+    {
+     "t": "ENPH",
+     "w": 0.2614,
+     "m": false
+    },
+    {
+     "t": "IRM",
+     "w": 0.2595,
+     "m": true
+    },
+    {
+     "t": "MRO",
+     "w": 0.2591,
+     "m": false
+    },
+    {
+     "t": "WAB",
+     "w": 0.2529,
+     "m": true
+    },
+    {
+     "t": "LVS",
+     "w": 0.2391,
+     "m": true
+    },
+    {
+     "t": "HOLX",
+     "w": 0.237,
+     "m": false
+    },
+    {
+     "t": "WRB",
+     "w": 0.2303,
+     "m": false
+    },
+    {
+     "t": "EG",
+     "w": 0.2291,
+     "m": true
+    },
+    {
+     "t": "SNA",
+     "w": 0.2257,
+     "m": true
+    },
+    {
+     "t": "OMC",
+     "w": 0.2055,
+     "m": true
+    },
+    {
+     "t": "ATO",
+     "w": 0.1994,
+     "m": false
+    },
+    {
+     "t": "K",
+     "w": 0.1959,
+     "m": false
+    },
+    {
+     "t": "APA",
+     "w": 0.1847,
+     "m": false
+    },
+    {
+     "t": "CF",
+     "w": 0.1811,
+     "m": false
+    },
+    {
+     "t": "AES",
+     "w": 0.1742,
+     "m": false
+    },
+    {
+     "t": "FMC",
+     "w": 0.1631,
+     "m": false
+    },
+    {
+     "t": "MOS",
+     "w": 0.1509,
+     "m": false
+    },
+    {
+     "t": "GL",
+     "w": 0.1501,
+     "m": false
+    },
+    {
+     "t": "INCY",
+     "w": 0.1489,
+     "m": false
+    },
+    {
+     "t": "TAP",
+     "w": 0.1372,
+     "m": false
+    },
+    {
+     "t": "CPB",
+     "w": 0.1343,
+     "m": false
+    },
+    {
+     "t": "HII",
+     "w": 0.1295,
+     "m": false
+    },
+    {
+     "t": "HSIC",
+     "w": 0.1281,
+     "m": false
+    },
+    {
+     "t": "ROL",
+     "w": 0.1258,
+     "m": false
+    }
+   ],
+   "ours_only": [
+    "AMAT",
+    "AME",
+    "AMP",
+    "AVGO",
+    "AXON",
+    "BA",
+    "BKNG",
+    "BKR",
+    "BSX",
+    "BWA",
+    "CARR",
+    "CCL",
+    "CPRT",
+    "CTAS",
+    "DAL",
+    "DD",
+    "DE",
+    "DHI",
+    "DRI",
+    "DXCM",
+    "ETN",
+    "FCX",
+    "FICO",
+    "GE",
+    "HCA",
+    "IDXX",
+    "IR",
+    "ISRG",
+    "IT",
+    "ITW",
+    "JCI",
+    "JPM",
+    "LEN",
+    "LIN",
+    "LRCX",
+    "MAR",
+    "MCHP",
+    "META",
+    "MGM",
+    "MLM",
+    "NCLH",
+    "NFLX",
+    "NVDA",
+    "NVR",
+    "ODFL",
+    "ON",
+    "ORCL",
+    "PANW",
+    "PH",
+    "PHM",
+    "PNR",
+    "RCL",
+    "RL",
+    "ROK",
+    "ROST",
+    "SYK",
+    "TJX",
+    "TPR",
+    "TT",
+    "UAL",
+    "VMC",
+    "WMT",
+    "WYNN",
+    "ZBH"
+   ]
+  }
+ },
+ "turnover": {
+  "replaced": 64,
+  "kept": 36,
+  "added_caught": 62,
+  "dropped_excluded": 63,
+  "dropped": 64,
+  "kept_held": 35,
+  "ours_in_neither": 2
+ },
+ "bands": [
+  {
+   "key": "added",
+   "verb": "added",
+   "n": 64,
+   "cells": [
+    {
+     "t": "META",
+     "w": 9.7042,
+     "m": true
+    },
+    {
+     "t": "NVDA",
+     "w": 8.3176,
+     "m": true
+    },
+    {
+     "t": "AVGO",
+     "w": 6.5172,
+     "m": true
+    },
+    {
+     "t": "JPM",
+     "w": 6.009,
+     "m": true
+    },
+    {
+     "t": "NFLX",
+     "w": 3.3944,
+     "m": true
+    },
+    {
+     "t": "ORCL",
+     "w": 2.9934,
+     "m": true
+    },
+    {
+     "t": "GE",
+     "w": 2.6043,
+     "m": true
+    },
+    {
+     "t": "WMT",
+     "w": 2.4277,
+     "m": true
+    },
+    {
+     "t": "LIN",
+     "w": 2.3315,
+     "m": true
+    },
+    {
+     "t": "TJX",
+     "w": 1.6384,
+     "m": true
+    },
+    {
+     "t": "BKNG",
+     "w": 1.6184,
+     "m": true
+    },
+    {
+     "t": "BA",
+     "w": 1.5891,
+     "m": true
+    },
+    {
+     "t": "AMAT",
+     "w": 1.2119,
+     "m": true
+    },
+    {
+     "t": "ETN",
+     "w": 1.1769,
+     "m": true
+    },
+    {
+     "t": "ISRG",
+     "w": 1.1709,
+     "m": true
+    },
+    {
+     "t": "SYK",
+     "w": 1.1023,
+     "m": true
+    },
+    {
+     "t": "PANW",
+     "w": 1.0076,
+     "m": true
+    },
+    {
+     "t": "BSX",
+     "w": 0.9333,
+     "m": true
+    },
+    {
+     "t": "DE",
+     "w": 0.9146,
+     "m": true
+    },
+    {
+     "t": "MDLZ",
+     "w": 0.9136,
+     "m": false
+    },
+    {
+     "t": "LRCX",
+     "w": 0.8787,
+     "m": true
+    },
+    {
+     "t": "ITW",
+     "w": 0.7238,
+     "m": true
+    },
+    {
+     "t": "PH",
+     "w": 0.7062,
+     "m": true
+    },
+    {
+     "t": "TT",
+     "w": 0.6069,
+     "m": true
+    },
+    {
+     "t": "DHI",
+     "w": 0.598,
+     "m": true
+    },
+    {
+     "t": "ROST",
+     "w": 0.5626,
+     "m": true
+    },
+    {
+     "t": "CARR",
+     "w": 0.5581,
+     "m": true
+    },
+    {
+     "t": "CPRT",
+     "w": 0.5552,
+     "m": true
+    },
+    {
+     "t": "HCA",
+     "w": 0.5066,
+     "m": true
+    },
+    {
+     "t": "RCL",
+     "w": 0.4974,
+     "m": true
+    },
+    {
+     "t": "FCX",
+     "w": 0.4815,
+     "m": true
+    },
+    {
+     "t": "DXCM",
+     "w": 0.4698,
+     "m": true
+    },
+    {
+     "t": "MAR",
+     "w": 0.4671,
+     "m": true
+    },
+    {
+     "t": "LEN",
+     "w": 0.4248,
+     "m": true
+    },
+    {
+     "t": "MCHP",
+     "w": 0.4175,
+     "m": true
+    },
+    {
+     "t": "FICO",
+     "w": 0.4141,
+     "m": true
+    },
+    {
+     "t": "AME",
+     "w": 0.4109,
+     "m": true
+    },
+    {
+     "t": "IDXX",
+     "w": 0.3829,
+     "m": true
+    },
+    {
+     "t": "PHM",
+     "w": 0.381,
+     "m": true
+    },
+    {
+     "t": "IT",
+     "w": 0.3692,
+     "m": true
+    },
+    {
+     "t": "JCI",
+     "w": 0.359,
+     "m": true
+    },
+    {
+     "t": "BKR",
+     "w": 0.3544,
+     "m": true
+    },
+    {
+     "t": "AMP",
+     "w": 0.3424,
+     "m": true
+    },
+    {
+     "t": "ODFL",
+     "w": 0.3317,
+     "m": true
+    },
+    {
+     "t": "ON",
+     "w": 0.3302,
+     "m": true
+    },
+    {
+     "t": "VMC",
+     "w": 0.3217,
+     "m": true
+    },
+    {
+     "t": "ROK",
+     "w": 0.3184,
+     "m": true
+    },
+    {
+     "t": "DD",
+     "w": 0.3084,
+     "m": true
+    },
+    {
+     "t": "IR",
+     "w": 0.2831,
+     "m": true
+    },
+    {
+     "t": "DRI",
+     "w": 0.2818,
+     "m": true
+    },
+    {
+     "t": "DAL",
+     "w": 0.2739,
+     "m": true
+    },
+    {
+     "t": "MLM",
+     "w": 0.2614,
+     "m": true
+    },
+    {
+     "t": "NVR",
+     "w": 0.2542,
+     "m": true
+    },
+    {
+     "t": "ZBH",
+     "w": 0.247,
+     "m": true
+    },
+    {
+     "t": "AXON",
+     "w": 0.221,
+     "m": true
+    },
+    {
+     "t": "CCL",
+     "w": 0.2056,
+     "m": true
+    },
+    {
+     "t": "MGM",
+     "w": 0.1384,
+     "m": true
+    },
+    {
+     "t": "UAL",
+     "w": 0.1382,
+     "m": true
+    },
+    {
+     "t": "PNR",
+     "w": 0.1233,
+     "m": true
+    },
+    {
+     "t": "WYNN",
+     "w": 0.1109,
+     "m": true
+    },
+    {
+     "t": "SJM",
+     "w": 0.1046,
+     "m": false
+    },
+    {
+     "t": "BWA",
+     "w": 0.088,
+     "m": true
+    },
+    {
+     "t": "NCLH",
+     "w": 0.0764,
+     "m": true
+    },
+    {
+     "t": "RL",
+     "w": 0.049,
+     "m": true
+    }
+   ]
+  },
+  {
+   "key": "kept",
+   "verb": "kept",
+   "n": 36,
+   "cells": [
+    {
+     "t": "LLY",
+     "w": 6.183,
+     "m": true
+    },
+    {
+     "t": "MRK",
+     "w": 2.6559,
+     "m": true
+    },
+    {
+     "t": "CAT",
+     "w": 1.3722,
+     "m": true
+    },
+    {
+     "t": "GILD",
+     "w": 1.0657,
+     "m": true
+    },
+    {
+     "t": "SLB",
+     "w": 0.9005,
+     "m": true
+    },
+    {
+     "t": "VRTX",
+     "w": 0.8246,
+     "m": true
+    },
+    {
+     "t": "TDG",
+     "w": 0.775,
+     "m": true
+    },
+    {
+     "t": "ORLY",
+     "w": 0.7583,
+     "m": true
+    },
+    {
+     "t": "PCAR",
+     "w": 0.7367,
+     "m": true
+    },
+    {
+     "t": "MPC",
+     "w": 0.7179,
+     "m": true
+    },
+    {
+     "t": "REGN",
+     "w": 0.7167,
+     "m": true
+    },
+    {
+     "t": "PCG",
+     "w": 0.6677,
+     "m": true
+    },
+    {
+     "t": "ACGL",
+     "w": 0.6116,
+     "m": true
+    },
+    {
+     "t": "APD",
+     "w": 0.5631,
+     "m": true
+    },
+    {
+     "t": "MCK",
+     "w": 0.5284,
+     "m": true
+    },
+    {
+     "t": "AFL",
+     "w": 0.515,
+     "m": true
+    },
+    {
+     "t": "CAH",
+     "w": 0.514,
+     "m": true
+    },
+    {
+     "t": "CEG",
+     "w": 0.497,
+     "m": true
+    },
+    {
+     "t": "PSX",
+     "w": 0.4955,
+     "m": true
+    },
+    {
+     "t": "AJG",
+     "w": 0.493,
+     "m": true
+    },
+    {
+     "t": "COR",
+     "w": 0.424,
+     "m": true
+    },
+    {
+     "t": "GWW",
+     "w": 0.3961,
+     "m": true
+    },
+    {
+     "t": "PWR",
+     "w": 0.3629,
+     "m": true
+    },
+    {
+     "t": "HES",
+     "w": 0.3416,
+     "m": true
+    },
+    {
+     "t": "URI",
+     "w": 0.338,
+     "m": true
+    },
+    {
+     "t": "FSLR",
+     "w": 0.2775,
+     "m": true
+    },
+    {
+     "t": "CMI",
+     "w": 0.2606,
+     "m": false
+    },
+    {
+     "t": "HWM",
+     "w": 0.2564,
+     "m": true
+    },
+    {
+     "t": "EG",
+     "w": 0.2109,
+     "m": true
+    },
+    {
+     "t": "WAB",
+     "w": 0.2085,
+     "m": true
+    },
+    {
+     "t": "LVS",
+     "w": 0.1903,
+     "m": true
+    },
+    {
+     "t": "IRM",
+     "w": 0.1859,
+     "m": true
+    },
+    {
+     "t": "LW",
+     "w": 0.1767,
+     "m": true
+    },
+    {
+     "t": "STLD",
+     "w": 0.1609,
+     "m": true
+    },
+    {
+     "t": "OMC",
+     "w": 0.142,
+     "m": true
+    },
+    {
+     "t": "SNA",
+     "w": 0.1352,
+     "m": true
+    }
+   ]
+  },
+  {
+   "key": "removed",
+   "verb": "removed",
+   "n": 64,
+   "cells": [
+    {
+     "t": "XOM",
+     "w": 8.4911,
+     "m": false
+    },
+    {
+     "t": "CVX",
+     "w": 5.3228,
+     "m": false
+    },
+    {
+     "t": "ABBV",
+     "w": 3.1538,
+     "m": false
+    },
+    {
+     "t": "COP",
+     "w": 2.6026,
+     "m": false
+    },
+    {
+     "t": "BMY",
+     "w": 1.9617,
+     "m": false
+    },
+    {
+     "t": "CI",
+     "w": 1.8928,
+     "m": false
+    },
+    {
+     "t": "AMGN",
+     "w": 1.8682,
+     "m": false
+    },
+    {
+     "t": "TMUS",
+     "w": 1.7133,
+     "m": false
+    },
+    {
+     "t": "LMT",
+     "w": 1.5815,
+     "m": false
+    },
+    {
+     "t": "PGR",
+     "w": 1.3437,
+     "m": false
+    },
+    {
+     "t": "ELV",
+     "w": 1.2826,
+     "m": false
+    },
+    {
+     "t": "MMC",
+     "w": 1.2566,
+     "m": false
+    },
+    {
+     "t": "VLO",
+     "w": 1.216,
+     "m": false
+    },
+    {
+     "t": "CB",
+     "w": 1.2108,
+     "m": false
+    },
+    {
+     "t": "ADP",
+     "w": 1.1591,
+     "m": false
+    },
+    {
+     "t": "HUM",
+     "w": 1.1218,
+     "m": false
+    },
+    {
+     "t": "EOG",
+     "w": 0.9929,
+     "m": false
+    },
+    {
+     "t": "NUE",
+     "w": 0.9854,
+     "m": false
+    },
+    {
+     "t": "OXY",
+     "w": 0.9763,
+     "m": false
+    },
+    {
+     "t": "NOC",
+     "w": 0.8854,
+     "m": false
+    },
+    {
+     "t": "AON",
+     "w": 0.8786,
+     "m": false
+    },
+    {
+     "t": "CDNS",
+     "w": 0.788,
+     "m": true
+    },
+    {
+     "t": "CTVA",
+     "w": 0.7226,
+     "m": false
+    },
+    {
+     "t": "AZO",
+     "w": 0.7085,
+     "m": false
+    },
+    {
+     "t": "SRE",
+     "w": 0.6723,
+     "m": false
+    },
+    {
+     "t": "MNST",
+     "w": 0.6091,
+     "m": false
+    },
+    {
+     "t": "GD",
+     "w": 0.6083,
+     "m": false
+    },
+    {
+     "t": "GIS",
+     "w": 0.5826,
+     "m": false
+    },
+    {
+     "t": "TRV",
+     "w": 0.5441,
+     "m": false
+    },
+    {
+     "t": "VICI",
+     "w": 0.5171,
+     "m": false
+    },
+    {
+     "t": "HAL",
+     "w": 0.4939,
+     "m": false
+    },
+    {
+     "t": "BIIB",
+     "w": 0.4868,
+     "m": false
+    },
+    {
+     "t": "WMB",
+     "w": 0.4771,
+     "m": false
+    },
+    {
+     "t": "HSY",
+     "w": 0.4559,
+     "m": false
+    },
+    {
+     "t": "DVN",
+     "w": 0.4519,
+     "m": false
+    },
+    {
+     "t": "ED",
+     "w": 0.4234,
+     "m": false
+    },
+    {
+     "t": "GPC",
+     "w": 0.4227,
+     "m": false
+    },
+    {
+     "t": "ULTA",
+     "w": 0.4012,
+     "m": false
+    },
+    {
+     "t": "OKE",
+     "w": 0.3692,
+     "m": false
+    },
+    {
+     "t": "KHC",
+     "w": 0.3649,
+     "m": false
+    },
+    {
+     "t": "FANG",
+     "w": 0.3261,
+     "m": false
+    },
+    {
+     "t": "EIX",
+     "w": 0.3192,
+     "m": false
+    },
+    {
+     "t": "PFG",
+     "w": 0.3048,
+     "m": false
+    },
+    {
+     "t": "TRGP",
+     "w": 0.2774,
+     "m": false
+    },
+    {
+     "t": "CTRA",
+     "w": 0.2732,
+     "m": false
+    },
+    {
+     "t": "EQT",
+     "w": 0.2691,
+     "m": false
+    },
+    {
+     "t": "ENPH",
+     "w": 0.2614,
+     "m": false
+    },
+    {
+     "t": "MRO",
+     "w": 0.2591,
+     "m": false
+    },
+    {
+     "t": "HOLX",
+     "w": 0.237,
+     "m": false
+    },
+    {
+     "t": "WRB",
+     "w": 0.2303,
+     "m": false
+    },
+    {
+     "t": "ATO",
+     "w": 0.1994,
+     "m": false
+    },
+    {
+     "t": "K",
+     "w": 0.1959,
+     "m": false
+    },
+    {
+     "t": "APA",
+     "w": 0.1847,
+     "m": false
+    },
+    {
+     "t": "CF",
+     "w": 0.1811,
+     "m": false
+    },
+    {
+     "t": "AES",
+     "w": 0.1742,
+     "m": false
+    },
+    {
+     "t": "FMC",
+     "w": 0.1631,
+     "m": false
+    },
+    {
+     "t": "MOS",
+     "w": 0.1509,
+     "m": false
+    },
+    {
+     "t": "GL",
+     "w": 0.1501,
+     "m": false
+    },
+    {
+     "t": "INCY",
+     "w": 0.1489,
+     "m": false
+    },
+    {
+     "t": "TAP",
+     "w": 0.1372,
+     "m": false
+    },
+    {
+     "t": "CPB",
+     "w": 0.1343,
+     "m": false
+    },
+    {
+     "t": "HII",
+     "w": 0.1295,
+     "m": false
+    },
+    {
+     "t": "HSIC",
+     "w": 0.1281,
+     "m": false
+    },
+    {
+     "t": "ROL",
+     "w": 0.1258,
+     "m": false
+    }
+   ]
+  }
+ ],
+ "scatter": [
+  {
+   "t": "META",
+   "them": 9.7042,
+   "us": 9.0,
+   "rank": 15,
+   "bound": true
+  },
+  {
+   "t": "NVDA",
+   "them": 8.3176,
+   "us": 9.0,
+   "rank": 1,
+   "bound": true
+  },
+  {
+   "t": "AVGO",
+   "them": 6.5172,
+   "us": 5.9412,
+   "rank": 10,
+   "bound": false
+  },
+  {
+   "t": "LLY",
+   "them": 6.183,
+   "us": 6.5597,
+   "rank": 27,
+   "bound": false
+  },
+  {
+   "t": "JPM",
+   "them": 6.009,
+   "us": 5.0653,
+   "rank": 37,
+   "bound": false
+  },
+  {
+   "t": "NFLX",
+   "them": 3.3944,
+   "us": 3.0233,
+   "rank": 9,
+   "bound": false
+  },
+  {
+   "t": "ORCL",
+   "them": 2.9934,
+   "us": 5.0024,
+   "rank": 11,
+   "bound": false
+  },
+  {
+   "t": "MRK",
+   "them": 2.6559,
+   "us": 2.5192,
+   "rank": 77,
+   "bound": false
+  },
+  {
+   "t": "GE",
+   "them": 2.6043,
+   "us": 2.3242,
+   "rank": 2,
+   "bound": false
+  },
+  {
+   "t": "WMT",
+   "them": 2.4277,
+   "us": 4.4465,
+   "rank": 62,
+   "bound": false
+  },
+  {
+   "t": "LIN",
+   "them": 2.3315,
+   "us": 2.0526,
+   "rank": 53,
+   "bound": false
+  },
+  {
+   "t": "TJX",
+   "them": 1.6384,
+   "us": 1.593,
+   "rank": 12,
+   "bound": false
+  },
+  {
+   "t": "BKNG",
+   "them": 1.6184,
+   "us": 1.5689,
+   "rank": 16,
+   "bound": false
+  },
+  {
+   "t": "BA",
+   "them": 1.5891,
+   "us": 1.6074,
+   "rank": 38,
+   "bound": false
+  },
+  {
+   "t": "CAT",
+   "them": 1.3722,
+   "us": 1.4407,
+   "rank": 64,
+   "bound": false
+  },
+  {
+   "t": "AMAT",
+   "them": 1.2119,
+   "us": 1.2008,
+   "rank": 75,
+   "bound": false
+  },
+  {
+   "t": "ETN",
+   "them": 1.1769,
+   "us": 1.1092,
+   "rank": 34,
+   "bound": false
+  },
+  {
+   "t": "ISRG",
+   "them": 1.1709,
+   "us": 1.164,
+   "rank": 57,
+   "bound": false
+  },
+  {
+   "t": "SYK",
+   "them": 1.1023,
+   "us": 1.1353,
+   "rank": 59,
+   "bound": false
+  },
+  {
+   "t": "GILD",
+   "them": 1.0657,
+   "us": 0.9362,
+   "rank": 68,
+   "bound": false
+  },
+  {
+   "t": "PANW",
+   "them": 1.0076,
+   "us": 0.8225,
+   "rank": 49,
+   "bound": false
+  },
+  {
+   "t": "BSX",
+   "them": 0.9333,
+   "us": 0.8891,
+   "rank": 44,
+   "bound": false
+  },
+  {
+   "t": "DE",
+   "them": 0.9146,
+   "us": 1.0464,
+   "rank": 84,
+   "bound": false
+  },
+  {
+   "t": "SLB",
+   "them": 0.9005,
+   "us": 0.9698,
+   "rank": 41,
+   "bound": false
+  },
+  {
+   "t": "LRCX",
+   "them": 0.8787,
+   "us": 0.8308,
+   "rank": 81,
+   "bound": false
+  },
+  {
+   "t": "VRTX",
+   "them": 0.8246,
+   "us": 0.8083,
+   "rank": 78,
+   "bound": false
+  },
+  {
+   "t": "TDG",
+   "them": 0.775,
+   "us": 0.6624,
+   "rank": 19,
+   "bound": false
+  },
+  {
+   "t": "ORLY",
+   "them": 0.7583,
+   "us": 0.7115,
+   "rank": 24,
+   "bound": false
+  },
+  {
+   "t": "PCAR",
+   "them": 0.7367,
+   "us": 0.5711,
+   "rank": 20,
+   "bound": false
+  },
+  {
+   "t": "ITW",
+   "them": 0.7238,
+   "us": 0.7462,
+   "rank": 65,
+   "bound": false
+  },
+  {
+   "t": "MPC",
+   "them": 0.7179,
+   "us": 0.6393,
+   "rank": 45,
+   "bound": false
+  },
+  {
+   "t": "REGN",
+   "them": 0.7167,
+   "us": 0.7364,
+   "rank": 101,
+   "bound": false
+  },
+  {
+   "t": "PH",
+   "them": 0.7062,
+   "us": 0.6413,
+   "rank": 36,
+   "bound": false
+  },
+  {
+   "t": "PCG",
+   "them": 0.6677,
+   "us": 0.6147,
+   "rank": 6,
+   "bound": false
+  },
+  {
+   "t": "ACGL",
+   "them": 0.6116,
+   "us": 0.5348,
+   "rank": 3,
+   "bound": false
+  },
+  {
+   "t": "TT",
+   "them": 0.6069,
+   "us": 0.5208,
+   "rank": 47,
+   "bound": false
+  },
+  {
+   "t": "DHI",
+   "them": 0.598,
+   "us": 0.5914,
+   "rank": 14,
+   "bound": false
+  },
+  {
+   "t": "APD",
+   "them": 0.5631,
+   "us": 0.567,
+   "rank": 91,
+   "bound": false
+  },
+  {
+   "t": "ROST",
+   "them": 0.5626,
+   "us": 0.4995,
+   "rank": 35,
+   "bound": false
+  },
+  {
+   "t": "CARR",
+   "them": 0.5581,
+   "us": 0.5834,
+   "rank": 33,
+   "bound": false
+  },
+  {
+   "t": "CPRT",
+   "them": 0.5552,
+   "us": 0.5349,
+   "rank": 25,
+   "bound": false
+  },
+  {
+   "t": "MCK",
+   "them": 0.5284,
+   "us": 0.4545,
+   "rank": 102,
+   "bound": false
+  },
+  {
+   "t": "AFL",
+   "them": 0.515,
+   "us": 0.4631,
+   "rank": 60,
+   "bound": false
+  },
+  {
+   "t": "CAH",
+   "them": 0.514,
+   "us": 0.376,
+   "rank": 7,
+   "bound": false
+  },
+  {
+   "t": "HCA",
+   "them": 0.5066,
+   "us": 0.7295,
+   "rank": 72,
+   "bound": false
+  },
+  {
+   "t": "RCL",
+   "them": 0.4974,
+   "us": 0.4729,
+   "rank": 4,
+   "bound": false
+  },
+  {
+   "t": "CEG",
+   "them": 0.497,
+   "us": 0.4117,
+   "rank": 30,
+   "bound": false
+  },
+  {
+   "t": "PSX",
+   "them": 0.4955,
+   "us": 0.3901,
+   "rank": 115,
+   "bound": false
+  },
+  {
+   "t": "AJG",
+   "them": 0.493,
+   "us": 0.4385,
+   "rank": 86,
+   "bound": false
+  },
+  {
+   "t": "FCX",
+   "them": 0.4815,
+   "us": 0.4984,
+   "rank": 88,
+   "bound": false
+  },
+  {
+   "t": "DXCM",
+   "them": 0.4698,
+   "us": 0.4079,
+   "rank": 61,
+   "bound": false
+  },
+  {
+   "t": "MAR",
+   "them": 0.4671,
+   "us": 0.5435,
+   "rank": 80,
+   "bound": false
+  },
+  {
+   "t": "LEN",
+   "them": 0.4248,
+   "us": 0.4255,
+   "rank": 28,
+   "bound": false
+  },
+  {
+   "t": "COR",
+   "them": 0.424,
+   "us": 0.42,
+   "rank": 39,
+   "bound": false
+  },
+  {
+   "t": "MCHP",
+   "them": 0.4175,
+   "us": 0.3919,
+   "rank": 87,
+   "bound": false
+  },
+  {
+   "t": "FICO",
+   "them": 0.4141,
+   "us": 0.3371,
+   "rank": 13,
+   "bound": false
+  },
+  {
+   "t": "AME",
+   "them": 0.4109,
+   "us": 0.4087,
+   "rank": 48,
+   "bound": false
+  },
+  {
+   "t": "GWW",
+   "them": 0.3961,
+   "us": 0.3899,
+   "rank": 52,
+   "bound": false
+  },
+  {
+   "t": "IDXX",
+   "them": 0.3829,
+   "us": 0.4194,
+   "rank": 66,
+   "bound": false
+  },
+  {
+   "t": "PHM",
+   "them": 0.381,
+   "us": 0.336,
+   "rank": 5,
+   "bound": false
+  },
+  {
+   "t": "IT",
+   "them": 0.3692,
+   "us": 0.296,
+   "rank": 54,
+   "bound": false
+  },
+  {
+   "t": "PWR",
+   "them": 0.3629,
+   "us": 0.3947,
+   "rank": 23,
+   "bound": false
+  },
+  {
+   "t": "JCI",
+   "them": 0.359,
+   "us": 0.3716,
+   "rank": 76,
+   "bound": false
+  },
+  {
+   "t": "BKR",
+   "them": 0.3544,
+   "us": 0.3543,
+   "rank": 70,
+   "bound": false
+  },
+  {
+   "t": "AMP",
+   "them": 0.3424,
+   "us": 0.3112,
+   "rank": 79,
+   "bound": false
+  },
+  {
+   "t": "HES",
+   "them": 0.3416,
+   "us": 0.4055,
+   "rank": 92,
+   "bound": false
+  },
+  {
+   "t": "URI",
+   "them": 0.338,
+   "us": 0.3288,
+   "rank": 63,
+   "bound": false
+  },
+  {
+   "t": "ODFL",
+   "them": 0.3317,
+   "us": 0.4411,
+   "rank": 74,
+   "bound": false
+  },
+  {
+   "t": "ON",
+   "them": 0.3302,
+   "us": 0.4512,
+   "rank": 56,
+   "bound": false
+  },
+  {
+   "t": "VMC",
+   "them": 0.3217,
+   "us": 0.318,
+   "rank": 50,
+   "bound": false
+  },
+  {
+   "t": "ROK",
+   "them": 0.3184,
+   "us": 0.3437,
+   "rank": 73,
+   "bound": false
+  },
+  {
+   "t": "DD",
+   "them": 0.3084,
+   "us": 0.3117,
+   "rank": 85,
+   "bound": false
+  },
+  {
+   "t": "IR",
+   "them": 0.2831,
+   "us": 0.2726,
+   "rank": 71,
+   "bound": false
+  },
+  {
+   "t": "DRI",
+   "them": 0.2818,
+   "us": 0.2486,
+   "rank": 22,
+   "bound": false
+  },
+  {
+   "t": "FSLR",
+   "them": 0.2775,
+   "us": 0.3235,
+   "rank": 8,
+   "bound": false
+  },
+  {
+   "t": "DAL",
+   "them": 0.2739,
+   "us": 0.3125,
+   "rank": 43,
+   "bound": false
+  },
+  {
+   "t": "MLM",
+   "them": 0.2614,
+   "us": 0.2446,
+   "rank": 82,
+   "bound": false
+  },
+  {
+   "t": "HWM",
+   "them": 0.2564,
+   "us": 0.2476,
+   "rank": 32,
+   "bound": false
+  },
+  {
+   "t": "NVR",
+   "them": 0.2542,
+   "us": 0.2598,
+   "rank": 26,
+   "bound": false
+  },
+  {
+   "t": "ZBH",
+   "them": 0.247,
+   "us": 0.2453,
+   "rank": 67,
+   "bound": false
+  },
+  {
+   "t": "AXON",
+   "them": 0.221,
+   "us": 0.2132,
+   "rank": 17,
+   "bound": false
+  },
+  {
+   "t": "EG",
+   "them": 0.2109,
+   "us": 0.1743,
+   "rank": 46,
+   "bound": false
+  },
+  {
+   "t": "WAB",
+   "them": 0.2085,
+   "us": 0.1966,
+   "rank": 69,
+   "bound": false
+  },
+  {
+   "t": "CCL",
+   "them": 0.2056,
+   "us": 0.2745,
+   "rank": 18,
+   "bound": false
+  },
+  {
+   "t": "LVS",
+   "them": 0.1903,
+   "us": 0.5167,
+   "rank": 29,
+   "bound": false
+  },
+  {
+   "t": "IRM",
+   "them": 0.1859,
+   "us": 0.1603,
+   "rank": 90,
+   "bound": false
+  },
+  {
+   "t": "LW",
+   "them": 0.1767,
+   "us": 0.1631,
+   "rank": 42,
+   "bound": false
+  },
+  {
+   "t": "STLD",
+   "them": 0.1609,
+   "us": 0.1488,
+   "rank": 96,
+   "bound": false
+  },
+  {
+   "t": "OMC",
+   "them": 0.142,
+   "us": 0.1266,
+   "rank": 110,
+   "bound": false
+  },
+  {
+   "t": "MGM",
+   "them": 0.1384,
+   "us": 0.1896,
+   "rank": 31,
+   "bound": false
+  },
+  {
+   "t": "UAL",
+   "them": 0.1382,
+   "us": 0.173,
+   "rank": 58,
+   "bound": false
+  },
+  {
+   "t": "SNA",
+   "them": 0.1352,
+   "us": 0.1212,
+   "rank": 93,
+   "bound": false
+  },
+  {
+   "t": "PNR",
+   "them": 0.1233,
+   "us": 0.1267,
+   "rank": 51,
+   "bound": false
+  },
+  {
+   "t": "WYNN",
+   "them": 0.1109,
+   "us": 0.1532,
+   "rank": 21,
+   "bound": false
+  },
+  {
+   "t": "BWA",
+   "them": 0.088,
+   "us": 0.1018,
+   "rank": 55,
+   "bound": false
+  },
+  {
+   "t": "NCLH",
+   "them": 0.0764,
+   "us": 0.0818,
+   "rank": 40,
+   "bound": false
+  },
+  {
+   "t": "RL",
+   "them": 0.049,
+   "us": 0.0675,
+   "rank": 83,
+   "bound": false
+  }
+ ],
+ "stats": {
+  "n": 97,
+  "median_ratio": 0.972,
+  "within_25pct": 83,
+  "spearman": 0.9681
+ },
+ "offset": {
+  "ours_unique_weight": 1.0,
+  "theirs_unique_weight": 1.28,
+  "top_name": "CDNS",
+  "top_weight": 0.53,
+  "ours_unique_count": 3,
+  "theirs_unique_count": 3,
+  "unique_rank_range": [
+   106,
+   109
+  ]
+ },
+ "variants": {
+  "unchained": 94,
+  "chained_own": 97,
+  "chained_tracker": 98,
+  "buffer_retained": 13,
+  "feb_reference": "2023-02-28",
+  "feb_effective": "2023-03-17"
+ },
+ "capacity": [
+  {
+   "label": "Share within the selected 100",
+   "note": "what this project runs",
+   "v": 2.2698968481395716,
+   "ok": true
+  },
+  {
+   "label": "Share of the eligible universe (501)",
+   "note": "what the source's wording points at",
+   "v": 0.7486,
+   "ok": false
+  },
+  {
+   "label": "Share of the parent index (503)",
+   "note": "what this project first recorded",
+   "v": 0.7473489913941624,
+   "ok": false
+  }
+ ],
+ "float_rows": [
+  {
+   "t": "META",
+   "full": 9.0,
+   "float": 9.0,
+   "actual": 9.704
+  },
+  {
+   "t": "NVDA",
+   "full": 9.0,
+   "float": 9.0,
+   "actual": 8.318
+  },
+  {
+   "t": "AVGO",
+   "full": 5.941,
+   "float": 6.562,
+   "actual": 6.517
+  },
+  {
+   "t": "LLY",
+   "full": 6.56,
+   "float": 5.952,
+   "actual": 6.183
+  },
+  {
+   "t": "JPM",
+   "full": 5.065,
+   "float": 5.568,
+   "actual": 6.009
+  },
+  {
+   "t": "NFLX",
+   "full": 3.023,
+   "float": 3.316,
+   "actual": 3.394
+  },
+  {
+   "t": "ORCL",
+   "full": 5.002,
+   "float": 3.101,
+   "actual": 2.993
+  },
+  {
+   "t": "MRK",
+   "full": 2.519,
+   "float": 2.754,
+   "actual": 2.656
+  },
+  {
+   "t": "GE",
+   "full": 2.324,
+   "float": 2.542,
+   "actual": 2.604
+  },
+  {
+   "t": "WMT",
+   "full": 4.447,
+   "float": 2.532,
+   "actual": 2.428
+  },
+  {
+   "t": "LIN",
+   "full": 2.053,
+   "float": 2.252,
+   "actual": 2.332
+  },
+  {
+   "t": "TJX",
+   "full": 1.593,
+   "float": 1.753,
+   "actual": 1.638
+  },
+  {
+   "t": "BKNG",
+   "full": 1.569,
+   "float": 1.775,
+   "actual": 1.618
+  },
+  {
+   "t": "BA",
+   "full": 1.607,
+   "float": 1.647,
+   "actual": 1.589
+  }
+ ],
+ "float_stats": {
+  "full": 0.1299,
+  "float": 0.0698,
+  "n": 97
+ }
+}
