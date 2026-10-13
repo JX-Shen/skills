@@ -1,11 +1,13 @@
 ---
 name: briefing
-description: Produce a decision briefing that asks a named non-technical audience to ratify a design, with its cost stated. Use when the user wants a memo, brief, board paper, or decision document for management, an executive, or a client, or wants an existing briefing re-released.
+description: "Produce a briefing for a named non-technical decider: a decision document that asks them to ratify a design with its cost stated, a progress or stage report that says where the work stands and what continuing costs, or a review of a delivery they must accept or reject. Use when the user wants a memo, brief, board paper, progress report, status update, stage report, delivery review, or any document, HTML page, or PDF for management, an executive, a PM, a boss, or a client; when they say 汇报, 阶段汇报, 进展汇报, 汇报稿, 给老板看, 给老板写, 报告给管理层, 验收报告; or when they want an existing briefing re-released or re-cut."
 ---
 
 <what-to-do>
 
 A briefing **ratifies**. It asks a named human to confirm a design that is already reasoned, and it states what that design costs. It never sells. Every step below serves that.
+
+The same discipline covers the other two documents a decider receives. A **progress report** asks them to ratify continuing: the essence is where the work stands and what the next stage costs. A **delivery review** asks them to ratify acceptance or rejection of something handed over: the essence is what was delivered against what was asked, and what accepting it costs. Both carry a cost sentence, both open with the summary, both are built, rendered and released the same way.
 
 ## 1. Settle the essence before drafting a word
 
