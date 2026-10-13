@@ -47,6 +47,11 @@ def strip_tags(text):
     return _TAG.sub("", text).rstrip()
 
 
+def is_heading_para_text(text):
+    """A paragraph that is nothing but bold text acts as a run-in heading."""
+    return bool(re.fullmatch(r"\*\*[^*]+\*\*", text))
+
+
 def inline_runs(text):
     """Split into (text, bold, italic, muted) runs for docx."""
     runs = []
