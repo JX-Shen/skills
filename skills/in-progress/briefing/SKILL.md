@@ -27,7 +27,9 @@ Show that sentence to the user and get it confirmed. A cost-free sentence is a p
 
 ## 3. Build the artefact
 
-Read [`MECHANICS.md`](MECHANICS.md): the directory, the renderer, the page-check loop, and the release rule.
+Read [`MECHANICS.md`](MECHANICS.md): the directory, the renderer and its media, the page-check loop, and the release rule. Read [`SHAPE.md`](SHAPE.md) for the section order of the kind you are writing and the rule that every number traces to a figure or a citation.
+
+Settle the medium with the channel from step 2: HTML for a page the reader opens and scrolls, Markdown for an issue comment or a chat post, Word for a reader who edits, PDF for a reader who prints or files. One `brief.md` renders to all of them; pick what will actually be sent and look at that.
 
 ## 4. Write the brief, summary last
 
@@ -37,7 +39,7 @@ Across the whole document, carry three things **together**: a strong recommendat
 
 ## 5. Render, then look at every page as an image
 
-Orphaned headings, split tables, colliding diagram labels and overflowing URLs live in the pixels, not in the Markdown. Read every page, every render.
+Orphaned headings, split tables, a legend sitting on a label and overflowing URLs live in the pixels, not in the Markdown. Read every page of every medium that will be sent, every render. When the page is wrong, the renderer in `scripts/briefkit/` changes, not `brief.md`.
 
 ## 6. Lint, then cold-read, before the user sees a draft
 
@@ -49,7 +51,7 @@ Then run the cold read in [`agents/cold-read.md`](agents/cold-read.md): a fresh 
 
 ## 7. Release only what the user approved
 
-The user approves the content *and* the rendered pages. Then cut a date-stamped file and treat it as immutable — corrections are a new date, never an overwrite.
+The user approves the content *and* the rendered pages of each medium that will be sent. Then cut a date-stamped file per medium and treat it as immutable: corrections are a new date, never an overwrite.
 
 ## 8. Ratchet every confirmation into the README
 

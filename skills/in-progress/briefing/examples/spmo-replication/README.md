@@ -6,10 +6,10 @@ A worked `briefing` directory: a progress report for a non-technical portfolio m
 - `figures.py` registers the three `@figure` names the brief uses. Every number on every figure is read from the evidence; none is typed in.
 - `evidence/figures-data.json` is a verbatim copy of one evidence file from a private research work log (`momentum-anchor`, work-log `20260912-009-issue-7`, `spmo-comparison/figures-data.json`, 2023-08-31 reference date). It is here only so the example builds; its strings are data, not prose.
 
-Build every medium:
+Build every medium, from the skill's directory (two levels up):
 
 ```bash
-../../.venv/bin/python ../../scripts/briefkit/build.py brief.md --to html,md,docx,pdf
+.venv/bin/python scripts/briefkit/build.py examples/spmo-replication/brief.md --to html,md,docx,pdf
 ```
 
 Outputs land in `out/` (ignored by git).
