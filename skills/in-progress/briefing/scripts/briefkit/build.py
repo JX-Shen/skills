@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build a briefing from brief.md into one or more media.
 
-    build.py brief.md --to html,md,docx,pdf [--out out/] [--no-lint]
+    build.py brief.md --to html,md,gh,docx,pdf [--out out/] [--no-lint]
                       [--figures figures.py] [--evidence DIR]
 
 brief.md is the single content source. The briefing directory may carry a
@@ -10,6 +10,7 @@ matter (or --evidence) names the directory those figures read from. Both paths
 are taken relative to brief.md.
 
 Outputs land in <out>/ as work.<ext>; figures beside them in <out>/figures/.
+`gh` writes work.md plus work.gh.html, GitHub's own rendering of it for review.
 The lint runs first and a failing brief is not rendered; --no-lint is for
 drafting only, never for a file that reaches the reader.
 """
@@ -26,7 +27,7 @@ from briefkit import figures as figlib  # noqa: E402
 from briefkit import lint as lintlib  # noqa: E402
 from briefkit.parse import load  # noqa: E402
 
-MEDIA = ("html", "md", "docx", "pdf")
+MEDIA = ("html", "md", "gh", "docx", "pdf")
 
 
 class Context:
@@ -86,7 +87,7 @@ def main(argv=None):
     ctx = Context(out_dir, evidence_root)
     written = []
     for m in media:
-        out_path = os.path.join(out_dir, f"work.{m}")
+        out_path = os.path.join(out_dir, "work.gh.html" if m == "gh" else f"work.{m}")
         if m == "pdf":
             from briefkit import render_pdf
             render_pdf.render(fm, blocks, out_path, ctx)
@@ -96,6 +97,9 @@ def main(argv=None):
         elif m == "md":
             from briefkit import render_md
             render_md.render(fm, blocks, out_path, ctx)
+        elif m == "gh":
+            from briefkit import render_gh
+            render_gh.render(fm, blocks, out_path, ctx)
         elif m == "docx":
             from briefkit import render_docx
             render_docx.render(fm, blocks, out_path, ctx)

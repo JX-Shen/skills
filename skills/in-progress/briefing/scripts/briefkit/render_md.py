@@ -7,6 +7,7 @@ so the reader can follow them.
 """
 
 import os
+import re
 
 from briefkit import figures as figlib
 
@@ -23,7 +24,21 @@ def _table(rows):
     return "\n".join(out)
 
 
+_TAG_MD = re.compile(r"\[(evidence|run):\s*([^\]]+)\]")
+_URL = re.compile(r"(?<![<(])(https?://[^\s;,)\]]+)")
+
+
+def _link_tags(text):
+    """URLs inside a citation tag become <autolinks>: GitHub does not autolink a bare URL after `[`."""
+    return _TAG_MD.sub(lambda m: f"[{m.group(1)}: {_URL.sub(r'<\1>', m.group(2))}]", text)
+
+
 def block_md(kind, payload, ctx, out_dir):
+    out = _block_md(kind, payload, ctx, out_dir)
+    return out if out is None or kind == "code" else _link_tags(out)
+
+
+def _block_md(kind, payload, ctx, out_dir):
     if kind == "part":
         return f"## {payload}"
     if kind == "section":
@@ -55,8 +70,11 @@ def render(fm, blocks, out_path, ctx):
         head.append(f"# {fm['title']}")
     if fm.get("subtitle"):
         head.append(f"*{fm['subtitle']}*")
-    meta = [f"**{label}:** {fm[key]}" for label, key in META_LINES if fm.get(key)]
-    if fm.get("org"):
+    # `cover: title` keeps only the title, for media whose host already shows sender and date
+    # (an issue comment, a chat post).
+    title_only = fm.get("cover", "").strip() == "title"
+    meta = [] if title_only else [f"**{label}:** {fm[key]}" for label, key in META_LINES if fm.get(key)]
+    if fm.get("org") and not title_only:
         meta.insert(0, f"**{fm['org']}**")
     if meta:
         head.append("  \n".join(meta))

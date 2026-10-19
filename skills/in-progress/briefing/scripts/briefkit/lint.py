@@ -65,6 +65,11 @@ _TAG = re.compile(r"\[(evidence|run):\s*[^\]]+\]")
 _NUMBER = re.compile(r"(?<![\w.])\d[\d,]*(\.\d+)?\s?%?(?![\w.])")
 _YEAR = re.compile(r"^(19|20)\d\d$")
 _DATE = re.compile(r"\b(19|20)\d\d-\d\d-\d\d\b")
+_MONTH = (r"(?:January|February|March|April|May|June|July|August|September|October|November|December"
+          r"|Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sept|Sep|Oct|Nov|Dec)\.?")
+# "16 Oct", "27 to 29 October", "27-29 Oct", "October 27": a calendar day, not a measured number.
+_DAY_MONTH = re.compile(r"\b\d{1,2}(?:\s*(?:to|-|\u2013)\s*\d{1,2})?\s+" + _MONTH + r"(?![A-Za-z])"
+                        r"|\b" + _MONTH + r"\s+\d{1,2}(?:\s*(?:to|-|\u2013)\s*\d{1,2})?\b")
 
 
 class Problem:
@@ -77,7 +82,7 @@ class Problem:
 
 def _numbers_needing_trace(text):
     """Numbers in prose that are not years, dates, or inside citation tags."""
-    text = _DATE.sub(" ", _TAG.sub(" ", text))
+    text = _DAY_MONTH.sub(" ", _DATE.sub(" ", _TAG.sub(" ", text)))
     found = []
     for m in _NUMBER.finditer(text):
         tok = m.group(0).strip()
@@ -124,8 +129,9 @@ def lint_file(md_path):
         inline_plain(p if isinstance(p, str) else " ".join(
             " ".join(r) if isinstance(r, list) else r for r in p))
         for ln, k, p in summary_blocks if k in ("para", "bullets", "table"))
-    if not re.search(r"\bcosts?\b", summary_text, re.I):
-        P(first_ln, "SUM03", "the summary names no cost; state what the recommended path costs, and say when the money is unchanged")
+    if not re.search(r"\bcosts?\b|\bnothing new\b", summary_text, re.I):
+        P(first_ln, "SUM03", "the summary names no cost; state what the recommended path or the next stage "
+                             "costs the reader, or say in so many words that it costs nothing new")
     if kind == "review":
         if not re.search(r"\baccept|\breject", summary_text, re.I):
             P(first_ln, "SUM04", "a review's summary says whether to accept or reject the delivery")
