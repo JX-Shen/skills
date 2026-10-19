@@ -29,7 +29,9 @@ Each round the user answers reshapes the tree: settled decisions push the fronti
 
 Finding _facts_ is your job, never the user's. When a frontier question needs a fact from the environment (filesystem, tools, etc.), dispatch a sub-agent to find it; don't ask the user for anything you could look up yourself. Don't block on it: a running exploration is an unsettled prerequisite, so only the questions downstream of it wait for the sub-agent to report; ask the rest of the frontier now. The _decisions_ are the user's: put each to them and wait.
 
-The session is done when the frontier is empty: every branch of the design tree visited, nothing left silently assumed. Do not act on it until the user confirms you have reached a shared understanding.
+Keep a tally as you go. A **bare pick** is a question the user settles with a plain "yes" to your recommended answer, adding no reason of their own. A bare pick is a suspect: often a fact you could have found, or a decision the settled tree already implied, either of which should not have reached the user. Some are genuine decisions the user simply agrees with; the tally lets them tell which.
+
+The session is done when the frontier is empty: every branch of the design tree visited, nothing left silently assumed. Close with the tally (rounds, questions asked, bare picks) and name the bare-picked questions, so the next session asks fewer of them. Do not act on it until the user confirms you have reached a shared understanding.
 
 ## Legacy v1.1 style (one question at a time)
 

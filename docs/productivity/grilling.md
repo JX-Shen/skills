@@ -80,7 +80,8 @@ This is a real bug, still unfixed, and users report it across [harnesses](https:
 - It goes and looks facts up (reading files, dispatching a sub-agent) rather than asking you something it could have found out.
 - Research running in the background does not stall the round; only the questions that depend on it wait.
 - It stops at the end and asks you to confirm the understanding is shared, instead of starting work.
-- Question count stays high while round count stays low.
+- It closes with a tally (rounds, questions, bare picks) and names the questions you answered by just taking its recommendation: those are the ones it should have resolved itself.
+- Question count stays high while round count stays low, and the bare-pick count falls from one session to the next.
 
 ## Where it fits
 
