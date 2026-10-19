@@ -22,6 +22,10 @@ Headings may use other words; the lint matches by keyword (see `ORDER` in `lint.
 
 A progress report opens with what now works, then names what does not, then says what happens next. The gap section is where the reader learns the honest state; it is never folded into the good news as a qualifier, and never held back to the end as a confession.
 
+A **gap** is something that moves a number the reader will use, or waits on someone to act. A choice already settled, or an item with no effect on any result, goes under where the work stands, beside the thing it belongs to. When nothing moves a number, the gap section says so in its first sentence ("Nothing that moves a number.") and stays that short; a section padded to look complete reads as a confession of something larger.
+
+Where the work stands is told against the **whole plan**, not only the part just finished: every part with its plan date and its status, so a note on one part cannot be read as the whole work being done.
+
 A progress report tells the **evolution**, not the current state. "Two weeks ago the rules matched a third of the list; the rebalance check now matches all but three" is a report. "The rules match all but three" is a status line.
 
 ## Show, then tell
@@ -43,7 +47,7 @@ Years and dates are exempt. Every medium renders the tag small and muted; the li
 
 ## The first screen
 
-The summary fits one page in PDF and one screen in HTML: at most 25 non-blank source lines. It carries the cost of the recommended path in plain words, and it says when the money is unchanged, because a reader with an accounting background collapses labour into spend unless told otherwise. It carries the recommendation (or, for a review, accept or reject) so a reader who stops here leaves with the decision. `SUMMARY-SECTION.md` gives the internal order.
+The summary fits one page in PDF and one screen in HTML: at most 25 non-blank source lines. It carries the cost of the recommended path to the reader in plain words, or says in so many words that it costs them nothing new. For a reader with an accounting background it also says when the money is unchanged, because that reader collapses labour into spend unless told otherwise; a reader for whom money is not in play gets no money sentence. It carries the recommendation (or, for a review, accept or reject) so a reader who stops here leaves with the decision. `SUMMARY-SECTION.md` gives the internal order.
 
 ## Words that dress up a position
 
@@ -54,6 +58,8 @@ A problem list states the position. These phrases hide it, and the lint flags th
 - "no such notice found": an absence found by search is unverified; say what was searched and when.
 - "we recommend": one author, first person singular.
 - "you're absolutely right", "it's worth noting": filler and performative agreement.
+
+A departure is measured against what the reader asked for. Carrying out the reader's own request is the plan, not a departure, and is not announced as one.
 
 Severity follows the effect on the result, not who must fix it. A gap caused by our own construction choice stays ours until the choice has actually been put to the reader. Owner means who acts next; "Phase 2", "information" or a title is not an owner.
 

@@ -5,12 +5,13 @@
 One directory per briefing, holding every version of it:
 
 ```
+<scratch>/briefings/READER-<name>.md       the reader model: what one reader accepts, in every channel
 <scratch>/briefings/YYYY-MM-DD-<brief-name>/
   brief.md                       the single content source: all wording lives here
   figures.py                     the figures, as code reading the evidence (only when the brief uses @figure)
   README.md                      cold-start guide, and the ratchet
   speaking-notes.md              only when the document supplements a spoken ask; never distributed
-  out/                           the current unapproved renders: work.html, work.md, work.docx, work.pdf, figures/
+  out/                           the current unapproved renders: work.html, work.md, work.gh.html, work.docx, work.pdf, figures/
   YYYY-MM-DD-<Name>.<ext>        a release; immutable
 ```
 
@@ -28,7 +29,7 @@ Three rules make the directory work, and all three are load-bearing:
 
 `scripts/briefkit/build.py` parses `brief.md` once and renders it to every medium asked for. It reads a deliberately small Markdown subset; the parts worth knowing before you write `brief.md`:
 
-- Front matter `--- key: value ---` builds the cover. Keys are dropped when absent, so the cover carries only what you set. `kind:` names the document kind (`decision`, `progress`, `review`) for the lint; `evidence:` names the directory figures read from, relative to `brief.md`.
+- Front matter `--- key: value ---` builds the cover. Keys are dropped when absent, so the cover carries only what you set. `cover: title` keeps only the title, for a host that already shows sender and date (an issue comment, a chat post). `repo: owner/name` gives the `gh` medium its context. `kind:` names the document kind (`decision`, `progress`, `review`) for the lint; `evidence:` names the directory figures read from, relative to `brief.md`.
 - `#` is a section heading, `##` a subheading, `- ` a bullet, `> ` a small muted note (used for reference URLs), `|` a table, ``` a monospace block.
 - `[evidence: <file> <key>]` and `[run: <name>]` are citation tags. Put one in every block that states a number; every medium renders them small and muted.
 - `@figure <name>` draws a figure registered in `figures.py`. Figures are **code, not Markdown**: write a function that takes the evidence loader and returns a matplotlib `Figure`, and decorate it with `@figure("<name>")`. HTML and Markdown get SVG; PDF and Word get PNG.
@@ -49,7 +50,7 @@ Then, to render from the briefing directory (`$BRIEFING` is this skill's path):
 $BRIEFING/.venv/bin/python $BRIEFING/scripts/briefkit/build.py brief.md --to html,md,docx,pdf
 ```
 
-Outputs land in `out/`. The build runs the shape lint first and refuses a brief that fails it; `--no-lint` exists for drafting and never for a file that reaches the reader. `examples/spmo-replication/` is a complete directory to copy from.
+Outputs land in `out/`. `--to gh` writes `work.md` and `work.gh.html`: the Markdown sent through GitHub's own renderer (`gh api -X POST /markdown`, mode gfm, the repo as context) inside github-markdown-css. That page is how an issue or PR comment is reviewed, because briefkit's HTML is not what GitHub shows; the comment posted is still `work.md`. It needs `gh` signed in. The build runs the shape lint first and refuses a brief that fails it; `--no-lint` exists for drafting and never for a file that reaches the reader. `examples/spmo-replication/` is a complete directory to copy from.
 
 `scripts/md_to_pdf.template.py` is the earlier single-file PDF renderer and still works for a briefing that copied it; `briefkit` renders the same pages (`scripts/briefkit/check_pdf_parity.py` proves it pixel for pixel).
 
@@ -69,6 +70,7 @@ print(len(pdf), 'pages')"
 # HTML: one tall screenshot (Chrome, Brave or Chromium)
 "/Applications/Brave Browser.app/Contents/MacOS/Brave Browser" --headless --disable-gpu --hide-scrollbars \
   --window-size=1000,2600 --screenshot=page.png "file://$PWD/out/work.html"
+# an issue or PR comment: the same screenshot of out/work.gh.html
 ```
 
 Look at all of them, every time. What only the pixels show: a heading stranded at a page foot, a table splitting without repeating its header, a figure legend sitting on a label, a long URL past the right margin, a summary that has spilled onto a second page or below the first screen. Delete the PNGs afterwards.
@@ -87,12 +89,18 @@ A released file is **immutable**: it has been sent, and it is the record. A corr
 
 Put no signature block in any medium. The durable record of approval belongs in the tracker or decision record that owns the decision; the briefing is what those cite.
 
+## The reader model
+
+`READER-<name>.md` sits beside the briefing directories, in the repo the work belongs to, because a reader belongs to a project and not to this skill. It answers the questions of step 1 in `SKILL.md` (who they are, voice, lead, the ask, structure, register, silences), each with its date, its reason, and the document or correction it came from. The agent keeps it: step 1 builds or refreshes it by grilling itself against the evidence, and step 8 writes each confirmed reader rule into it.
+
+A rule in the model changes only by the user's correction, never by a lint message or a template. When the two disagree, the model wins and the conflict goes to the user, so the skill can learn from it.
+
 ## The README is the ratchet
 
 Every briefing directory carries a `README.md` written so that an agent with no memory of the conversation can produce a correct new version from it alone. It holds:
 
 - **The essence sentence, first**, with the principles that follow from it.
-- Audience and voice rules, as rules with their reasons.
+- The reader model it follows, and only the rules particular to this document, with their reasons.
 - The section structure, and which parts of it are load-bearing rather than incidental.
 - Environment, render, page-check, and release commands.
 - The directive set and its gotchas, and which media were sent.

@@ -11,25 +11,37 @@ The same discipline covers the other two documents a decider receives. A **progr
 
 ## 1. Settle the essence before drafting a word
 
-Write the design as **one sentence carrying its own cost**:
+**Load the reader model first.** Each reader has a model in the repo the work belongs to: `READER-<name>.md` beside the briefing directories (see [`MECHANICS.md`](MECHANICS.md)). It holds what this reader accepts in every channel. Open it. When it is missing, or older than the latest document sent to this reader, grill yourself to build or update it before writing anything, one question at a time, each answered from evidence:
+
+- **Who they are**: what they decide, what they already know, which vocabulary lands. Source: the repo's domain docs (`CONTEXT.md`, ADRs) and the tracker items they wrote.
+- **Voice**: who speaks to them, in which person, active or passive. The author acting ("I applied the rule") reads as ownership; the passive ("the rule is applied") reads as distance.
+- **The lead**: what the first sentence reports (plan position, an outcome, the ask) and in which polarity.
+- **The ask**: how they are asked to act, and what happens when they do not answer. A default that proceeds ("unless you comment here, I go ahead with X") is a different ask from an open question.
+- **Structure**: which tables recur and what keys their rows. Rows keyed by the reader's own list of items beat rows keyed by ours.
+- **Register**: length, jargon, what gets glossed at first use.
+- **Silences**: what is never raised with them, and why.
+
+The evidence is the last two or three documents this reader accepted, read in full (in any channel; the same channel's precedent wins on structure), and the ratchets of their briefing READMEs. Each answer goes into the model with the document or correction it came from. Ask the user only what the evidence cannot settle. Draft to the model; where this document has to break a rule in it, say so beside the draft.
+
+Then write the design as **one sentence carrying its own cost**:
 
 > A multi-account AWS design: higher maintenance, in exchange for a higher standard.
 
-Show that sentence to the user and get it confirmed. A cost-free sentence is a pitch, not an essence — if no cost appears in it, keep looking.
+Show that sentence to the user and get it confirmed. A cost-free sentence is a pitch, not an essence: if no cost appears in it, keep looking. A path that costs the reader nothing new says so, and that is its cost clause.
 
-**Done when** the user has confirmed the sentence. Draft nothing before that.
+**Done when** the reader model answers every question above from evidence or from the user, and the user has confirmed the sentence. Draft nothing before that, unless the user asks to see a draft first: then the essence sentence heads the draft you show, and a correction to it re-derives the summary (step 8).
 
 ## 2. Settle the three things the essence leaves open
 
-- **Audience.** Who reads it, and which vocabulary lands. An accounting reader takes *preventive control*, *line item*, *one invoice*, and stops reading at IAM, bucket, CDK. Ask when it is not obvious from the repo.
-- **Channel.** Is this document the whole ask, or the supplement to a spoken one? A supplement still stands alone — the reader six months from now was never in the room — and it also earns a `speaking-notes.md`.
+- **Audience.** Who reads it, beyond the reader model: a second reader, a reader six months on. An accounting reader takes *preventive control*, *line item*, *one invoice*, and stops reading at IAM, bucket, CDK.
+- **Channel.** Where it lands, which sets its render target and review loop: read that channel's entry in [`CHANNELS.md`](CHANNELS.md). And is this document the whole ask, or the supplement to a spoken one? A supplement still stands alone (the reader six months from now was never in the room), and it also earns a `speaking-notes.md`.
 - **What the reader already owns.** Prior briefs, diagrams, decisions. That material is the cheapest opening available: they have already paid for it.
 
 ## 3. Build the artefact
 
 Read [`MECHANICS.md`](MECHANICS.md): the directory, the renderer and its media, the page-check loop, and the release rule. Read [`SHAPE.md`](SHAPE.md) for the section order of the kind you are writing and the rule that every number traces to a figure or a citation.
 
-Settle the medium with the channel from step 2: HTML for a page the reader opens and scrolls, Markdown for an issue comment or a chat post, Word for a reader who edits, PDF for a reader who prints or files. One `brief.md` renders to all of them; pick what will actually be sent and look at that.
+The channel from step 2 sets the medium and how to look at it ([`CHANNELS.md`](CHANNELS.md)). One `brief.md` renders to every medium; pick what will actually be sent and look at that.
 
 ## 4. Write the brief, summary last
 
@@ -57,7 +69,9 @@ The user approves the content *and* the rendered pages of each medium that will 
 
 Each time the user corrects the essence, the order, the voice, or the register, write the confirmed principle into the briefing directory's `README.md` as a rule with its reason. The README is a **ratchet**: it turns one way, so a later edit cannot quietly undo a decision the user already made.
 
-Expect the essence itself to be corrected more than once. When it moves, **re-derive the summary from the new essence** rather than patching the old one — a summary whose weight sits on the wrong object cannot be fixed by tightening sentences.
+A rule about the reader (voice, register, the ask, silences) belongs to the reader, not the briefing: write it into `READER-<name>.md` with its date and reason as soon as the user confirms it, and let the briefing README cite the model and record only what is particular to this document. A rule copied by hand from one README to the next is a rule waiting to be dropped. A rule about the channel itself (how the host draws the page) goes to [`CHANNELS.md`](CHANNELS.md) in this skill.
+
+Expect the essence itself to be corrected more than once. When it moves, **re-derive the summary from the new essence** rather than patching the old one: a summary whose weight sits on the wrong object cannot be fixed by tightening sentences.
 
 </what-to-do>
 
@@ -65,11 +79,11 @@ Expect the essence itself to be corrected more than once. When it moves, **re-de
 
 ## Why the essence gates everything
 
-A reviewer who keeps rejecting the summary is not editing wording; they are testing whether the document knows what it is. Each answer to "what is this really about?" re-weights the entire front section — which thing is the object, which is downstream of it, what opens, what closes. Getting that sentence confirmed first is what makes the rest of the work survive review.
+A reviewer who keeps rejecting the summary is not editing wording; they are testing whether the document knows what it is. Each answer to "what is this really about?" re-weights the entire front section: which thing is the object, which is downstream of it, what opens, what closes. Getting that sentence confirmed first is what makes the rest of the work survive review.
 
 ## Where this fits
 
-- `/grilling` — stress-test the underlying decision *before* briefing anyone on it. A briefing communicates a decision; it does not make one.
-- `/research` — gather the primary sources a briefing cites, so every claim traces to something.
+- `/grilling`: stress-test the underlying decision *before* briefing anyone on it. A briefing communicates a decision; it does not make one.
+- `/research`: gather the primary sources a briefing cites, so every claim traces to something.
 
 </supporting-info>

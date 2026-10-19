@@ -1,11 +1,11 @@
 # Cold read
 
-Run this as a fresh subagent (a smaller model is fine) after the lint passes and before the user sees the draft. Give it the rendered medium the reader will receive (the HTML or the page images, not brief.md), the reader's description from step 2 of `SKILL.md`, and nothing else: no conversation history, no evidence files, no explanation of what the document is trying to say.
+Run this as a fresh subagent (a smaller model is fine) after the lint passes and before the user sees the draft. Give it the rendered medium the reader will receive (the HTML or the page images, not brief.md), the reader's description from their reader model (step 1 of `SKILL.md`), and nothing else: no conversation history, no evidence files, no explanation of what the document is trying to say.
 
 Prompt:
 
 ```
-You are the reader of the attached document: <reader description from step 2,
+You are the reader of the attached document: <reader description from the reader model,
 e.g. "a portfolio manager who decides on this work and does not read code">.
 You have five minutes and no one to ask. Read only what is in front of you.
 
